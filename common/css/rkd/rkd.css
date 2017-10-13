@@ -1,0 +1,265 @@
+.rkd .el-breadcrumb{
+	height: 40px;
+  width:100%;
+	background:url('../../img/rk/caozuomoren.png') ;
+
+}
+
+.rkd{
+
+	/*min-height: 700px;*/
+	position: relative;
+	/*overflow: auto;*/
+}
+.rkd .select_box{
+
+	overflow: auto;
+
+}
+
+.rkd .page2{
+	min-width: 1200px;
+	/*min-height: 700px;*/
+	position: relative;
+	/*overflow: auto;*/
+}
+.rkd .el-breadcrumb .el-button{
+	width: 80px;
+	height: 40px;
+	color:#000;
+	position: relative;
+	font-size:12px;
+}
+.rkd h1{
+	font-size:30px;
+	color:#000;
+	font-family: "微软雅黑";
+	font-weight: 900;
+	height: 55px;
+}
+.rkd .el-breadcrumb .el-button:hover{
+	background: url('../../img/rk/caozuoxuanfu.png');
+}
+.rkd .el-breadcrumb .el-button i{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:8px;
+}
+.rkd .el-breadcrumb .ico1{
+	background: url('../../img/rk/baocun.png');
+	left:0;
+
+}
+.rkd .el-breadcrumb .ico2{
+	background: url('../../img/rk/baocunshenhe.png');
+	left:0;
+
+}
+.rkd .el-breadcrumb .ico3{
+	background: url('../../img/rk/shangyitiao.png');
+	left:0;
+
+}
+.rkd .el-breadcrumb .ico4{
+	background: url('../../img/rk/xiayitiao.png');
+	right:0;
+
+}
+.rkd .el-breadcrumb .ico5{
+	background: url('../../img/rk/danjushezhi.png');
+	left:0;
+
+}
+.rkd .el-breadcrumb .ico6{
+	background: url('../../img/rk/dayin.png');
+	left:0;
+
+}
+.rkd .el-breadcrumb .ico7{
+	background: url('../../img/rk/yulan.png');
+	left:0;
+
+}
+.rkd .el-breadcrumb .ico8{
+	background: url('../../img/rk/caozuo.png');
+	left:0;
+
+}
+.rkd .el-breadcrumb .ico9{
+	background: url('../../img/rk/shenhe.png');
+	left:0;
+
+}
+.rkd .el-breadcrumb .ico10{
+	background: url('../../img/rk/fanshen.png');
+	left:0;
+
+}
+.rkd .el-breadcrumb .ico11{
+	background: url('../../img/rk/tuichu.png');
+	left:0;
+
+}
+.rkd h1{
+	font-family: "微软雅黑";
+}
+.rkd .el-row{
+	height: 40px;
+	font-size: 16px;
+	margin-bottom: 2px;
+}
+.rkd .el-col{
+	height: 40px;
+}
+
+
+.rkd .el-row .blueborder{
+	border:#36b4fd 1px;
+
+}
+.rkd .el-row .el-input{
+	margin-top: 6px;
+}
+.rkd .el-input__icon{
+	background-color: #6BC8FE;
+	color:#fff;
+
+}
+ .rkd .el-input__icon::before{
+	color:#fff;
+}
+.rkd   form .el-row .el-input{
+	width: 100%;
+	height: 25px;
+
+}
+.rkd .el-input input{
+	border:1px solid #6BC8FE;
+	height: 25px;
+	border-radius: 0;
+}
+
+.rkd .el-table{
+	border:1px solid #6BC8FE;
+
+}
+.rkd .spbg {
+	min-height: 306px;
+	 
+}
+.rkd .spbg .el-table__body-wrapper{
+	min-height: 260px;
+}
+.rkd .el-table th{
+	border:1px solid #6BC8FE;
+	background: #cdecfd;
+}
+.rkd .el-table th>.cell {
+	background: #cdecfd;
+}
+.rkd .el-table td{
+	border:1px solid #6BC8FE;
+	background: #F8F8F8;
+}
+.rkd .el-input__icon{
+	height: 25px;width: 25px;
+}
+.rkd form .el-form-item .el-form-item__content .el-input__icon{
+	top:18px
+}
+.rkd .el-select span{
+	color:#5EC0FD;
+}
+.rkd .el-dialog{
+	width: auto;
+	height: auto;
+
+}
+.rkd .el-dialog .dialog__body{
+	padding:0;
+
+}
+.rkd .el-dialog .dialog-header{
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.form-2{
+	height: 30px;
+}
+.rkd .demo-form-inline{
+
+	height: 0px;
+}
+.blue button{
+	float:left;
+}
+.rkd .el-dialog nav{
+	height: 40px;
+	width: 100%;
+	max-width: 1600px;
+	background:url('../../img/rk/caozuomoren.png') ;
+}
+.rkd nav button{
+	width: auto;
+	height: 40px;
+	color:#000;
+	position: relative;
+	font-size:12px;
+	border:none;
+	background: transparent;
+	padding-left: 25px;
+
+}
+.rkd nav button:hover{
+	background: url('../../img/rk/caozuoxuanfu.png');
+}
+.rkd nav i{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:8px;
+}
+.rkd nav .ico12{
+	left:0;
+	background: url(../../img/rk/dayin.png);
+}
+.rkd nav .ico13{
+	left:0;
+	background: url(../../img/rk/tuichu.png);
+	background-size:20px 20px;
+}
+.rkd .input_width{
+	width: 100%;
+}
+.rkd .button_w{
+  width:100%!important;
+}
+.rkd .grid-content p{
+	
+	line-height: 40px;
+	margin:0;
+	margin-left:15px;
+	color:#36b4fd;
+}
+.rkd .input_width  .el-input{
+	}
+
+
+@media screen and (max-width: 1800px and min-width: 1200px) {
+.rkd .grid-content p{
+		font-size: 12px!important;
+		background: red!important;
+	};
+.rkd .input_width{
+
+
+}
+
+}
+/*独立设置地址与备注的宽度*/
+.rkd .page2 .select_box .duliw{
+
+}

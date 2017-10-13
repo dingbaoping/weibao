@@ -1,0 +1,63 @@
+.ckd  {
+		width: 100%;
+		height: 100%;
+	}
+	
+.ckd	.but-box {
+		width: 100%;
+		height: 40px;
+		background: url(../../../src/assets/img/gun.png) repeat-x;
+		
+	}
+	
+.ckd	.boxtab {
+		float: left;
+		display: table;
+		height: 40px;
+		margin: 0 5px;		
+		line-height: 40px;
+		
+	}
+.ckd  div.boxtab:hover{
+	background: #efeeee;
+}	
+.ckd   div.but-box ul li{
+	display: table;
+	float: left;
+}
+.ckd  .curbox{
+ 	display: table;
+ 	margin: 0 auto;
+ 	padding-left: 30px;
+ 	background: url(../../img/rk/baocun.png) no-repeat;
+ 	background-position: 5px 10px;
+ 	cursor: pointer;
+ }
+.ckd  .gun {
+  	height: 20px;
+  	width: 1px;
+  	background: #b7b7b7;
+  	display: block;
+  	float: right;
+  	margin-top: 10px;
+  }
+.ckd  .bcsh{
+  	background: url(../../img/rk/baocunshenhe.png) no-repeat;
+  	background-position: 5px 10px;
+  }
+.ckd  .syt{
+  	background: url(../../img/rk/shangyitiao.png) no-repeat;
+  	background-position: 5px 10px;
+  }
+.ckd  .xyt{
+  	background: url(../../img/rk/xiayitiao.png) no-repeat;
+  	background-position: 5px 10px;
+  }
+.ckd    .xddyp{
+  	background: url(../../img/rk/xuandingdanyp.png) no-repeat;
+  	background-position: 5px 10px;
+  }
+.ckd    .xdd{
+  	background: url(../../img/rk/xuandingdan.png) no-repeat;
+  	background-position: 5px 10px;
+  }

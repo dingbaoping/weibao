@@ -1,0 +1,53 @@
+
+.dztc	.fr{float: right;}
+.dztc{
+		width: 400px;
+		height: 337px;
+	}
+
+.dztc .tc_title{
+	height: 30px;
+	background: #36B4FD;
+	color:#fff;
+	padding:0 15px 0 15px;
+	margin-bottom: 10px;
+}
+.dztc .tc_title .fl{
+	float: left;
+	color:#FFFFFF;
+	background: transparent;
+}
+.dztc .el-button{
+	padding-top:5px;
+	padding-bottom:5px;
+	height: 24px;
+	width: 80px;
+	border-radius: 0;
+	text-align: center;
+	border: 1px  solid #36B4FD;
+}
+.dztc  .button_row{
+	text-align: center;
+}
+.dztc .ok{
+	background: #36B4FD;
+	color:#fff;
+	
+}
+.dztc .el-row {
+	color:#36B4FD;
+}
+.dztc .el-row .el-select{
+	border:#36B4FD 1px solid;
+	height: 25px;
+}
+.dztc .el-row .el-input input{
+	height: 25px;
+}
+ .dztc .el-input .el-input__inner{
+	border:#36B4FD 1px solid;
+	height: 25px!important;
+}
+.dztc .cancel{
+	color:#36B4FD;
+}

@@ -1,0 +1,238 @@
+.khdangan {
+		width: 100%;
+		height: 100%;
+	}
+	
+.khdangan	.but-box {
+		width: 100%;
+		height: 40px;
+		background: url(../../../src/assets/img/gun.png) repeat-x;
+		display: table;
+		color:#000;
+	}
+	
+.khdangan	div.boxtab {
+		float: left;
+		display: table;
+		height: 40px;
+		margin: 0 5px;		
+		line-height: 40px;
+		
+	}
+.khdangan .boxtab:hover{
+	background: #efeeee ;
+}	
+.khdangan   div.but-box ul{
+	float:left;
+}
+.khdangan   div.but-box ul li{
+	display: table;
+	float: left;
+}
+.khdangan  .curbox{
+ 	display: table;
+ 	/*margin: 0 auto;*/
+ 	width:auto;
+ 	padding-left: 30px;
+ 	background: url(../../img/rk/baocun.png) no-repeat;
+ 	background-position: 5px 10px;
+ 	cursor: pointer;
+ 	float:left;
+ }
+ .khdangan .tjsearch{
+ 	width: 70%;
+ 	margin-left: 5px;
+ }
+.khdangan  .gun {
+  	height: 20px;
+  	width: 1px;
+  	background: #b7b7b7;
+  	display: block;
+  	float: right;
+  	margin-top: 10px;
+  }
+.khdangan  .bcsh{
+  	background: url(../../img/rk/baocunshenhe.png) no-repeat;
+  	background-position: 5px 10px;
+  }
+.khdangan  .syt{
+  	background: url(../../img/rk/shangyitiao.png) no-repeat;
+  	background-position: 5px 10px;
+  }
+.khdangan  .xyt{
+  	background: url(../../../common/img/rk/xiayitiao.png) no-repeat;
+  	background-position: 5px 10px;
+  }
+ .khdangan   .xddyp{
+  	background: url(../../../common/img/rk/xuandingdanyp.png) no-repeat;
+  	background-position: 5px 10px;
+  }
+ .khdangan   .xdd{
+  	background: url(../../../common/img/rk/xuandingdan.png) no-repeat;
+  	background-position: 5px 10px;
+  }
+  .khdangan  .tianjia {
+  	background: url(../../../src/assets/img/kehudaoru.png) no-repeat scroll top left;
+  	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+  }
+ .khdangan  .bj{
+ 	background: url(../../../src/assets/img/yuandingdandaoru.png) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+ }
+.khdangan  .sc{
+ 	background: url(../../img/rk/sc.png) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+ }
+.khdangan  .shuaxin{
+ 	background: url(../../img/rk/shuaxin.jpg) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+ }
+ .khdangan  .dc{
+ 	background: url(../../img/rk/daochu.jpg) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+ }
+ .khdangan  .dc{
+ 	background: url(../../img/rk/daochu.jpg) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+ }
+ .khdangan  .dzdc{
+ 	background: url(../../img/rk/dzdc.jpg) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+ }
+ .khdangan  .tj{
+ 	background: url(../../img/rk/tj.jpg) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+ }
+  .khdangan  .tjsearch{
+  	width: 150px;
+  	height: 25px;
+  
+  
+ 
+  }
+ .khdangan  .tjsearch input{
+ 	width: 150px;
+  	height: 25px;
+  	border:none;
+  	line-height: 40px;
+  	
+ }
+.khdangan  .tjsearch i{
+	top:10px;
+	background: #CCEBFD;
+}
+.khdangan  .tjsearch i::before{
+	content: url(../../img/rk/cx.png);
+}
+.khdangan .jy{
+	background: url(../../img/rk/jy.jpg) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+}
+.khdangan .fjy{
+	background: url(../../img/rk/fjy.jpg) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+}
+.khdangan .plxg{
+	background: url(../../img/rk/plxg.jpg) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+}
+.khdangan .jy{
+	background: url(../../img/rk/sp.jpg) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+}
+
+.khdangan .jy{
+	background: url(../../img/rk/sp.jpg) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+}
+.khdangan .ctys{
+	background: url(../../img/rk/chuangti.png) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+}
+.khdangan .tc{
+	background: url(../../img/rk/tuichu.png) no-repeat scroll top left;
+ 	background-size: 20px 20px ;
+  		background-position: 5px 10px;
+}
+.khdangan .left{
+	width: 18%;
+	border:#CCEBFD solid  1px;
+	height: 700px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float:left;
+		color:#000;
+}
+.khdangan .left span{
+	line-height: 35px;
+}
+
+.khdangan .right{
+	float:right;
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border:#CCEBFD solid  1px;
+	height: 700px;
+	margin-left: 10px;
+	color:#000;
+}
+
+.khdangan .right .el-table th{
+	border:#36B4FE solid 1px;
+	background: #CDECFE;
+}
+.khdangan .right .el-table th>.cell{
+	/*border:#36B4FE solid 1px;*/
+	background: #CDECFE;
+}
+.khdangan .right .el-table td{
+	border:#36B4FE solid 1px;
+}
+.khdangan .left .el-select{
+	
+  	height: 25px;
+  	border:none;
+  	line-height: 40px;
+  	border-radius: 0;
+}
+.khdangan  .left .el-select input{
+
+  	height: 25px;
+  	border:#36B4FE solid 1px;
+  	line-height: 40px;
+  	border-radius: 0;
+ }
+ .khdangan  .left .el-input input{
+
+  	height: 25px;
+  	border:#36B4FE solid 1px;
+  	line-height: 40px;
+  	border-radius: 0;
+ }
+ .khdangan  .left  .el-input__icon{
+ 	background:#CDECFE;
+ 	height: 23px;
+	 width: 23px;
+	 margin-right: 1px;
+ }
+.khdangan  .left .leftsearch{
+	margin-top: 5px;
+}
+.khdangan  .left .leftsearch .el-input__icon{
+	margin: -3px 1px 0 0;
+}

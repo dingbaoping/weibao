@@ -1,0 +1,224 @@
+.rksh .el-breadcrumb{
+	height: 40px;
+	width: 100%;
+	background:url('../../img/rk/caozuomoren.png') ;
+
+}
+.rksh .el-breadcrumb .el-button{
+	width: auto;
+	padding-left:30px;
+	height: 40px;
+	color:#000;
+	position: relative;
+	font-size:12px;
+	text-align: right;
+}
+.rksh .el-breadcrumb .el-button:hover{
+	background: url('../../img/rk/caozuoxuanfu.png');
+}
+.rksh .el-breadcrumb .el-button i{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:8px;
+}
+.rksh .el-breadcrumb .ico1{
+	background: url('../../img/rk/shenhe.png');
+	left:10px;
+
+}
+.rksh .el-breadcrumb .ico2{
+	background: url('../../img/rk/baocunshenhe.png');
+	left:0px;
+}
+.rksh .el-breadcrumb .ico3{
+	background: url('../../img/rk/beizhu.png');
+	left:-1px
+}
+.rksh .el-breadcrumb .ico4{
+	background: url('../../img/rk/chuangti.png');
+	left:-1px
+}
+.rksh .el-breadcrumb .ico5{
+	background: url('../../img/rk/tuichu.png');
+	left:-1px
+}
+.rksh .fl{
+	float: left;
+}
+.rksh .fr{
+	float: right;
+}
+.rksh .el-input{
+	height: 25px;
+	float: right;
+}
+.rksh .el-input input{
+	border:1px solid #6BC8FE;
+	height: 25px;
+	border-radius: 0;
+}
+.rksh .el-input__icon{
+	background-color: #6BC8FE;
+	color:#fff;
+
+}
+.rksh .el-input__icon::before{
+	color:#fff;
+}
+.rksh .form1{
+	margin-top: 15px;
+}
+.rksh .el-col span{
+	line-height: 25px;
+}
+.rksh .zdrq{
+	width: 100%;
+}
+.djbh .el-input__inner{
+	width: 100%;
+}
+.djbh .el-input__inner{
+
+}
+.rksh .rq2{
+	/*margin-left: 12px;*/
+}
+.rksh .shbz{
+	width: 100%;
+
+}
+.rksh .hzf{
+	width: 70%;
+}
+.rksh .grid-content{
+	position: relative;
+}
+.rksh .grid-content .el-button{
+	width: 100px; height: 25px;
+	line-height: 25px;
+	position: absolute;
+	border-radius: 0;
+	background: url('../../img/rk/yeqianmoren.png');
+	border:none;
+	color:#000;
+}
+.rksh .grid-content .cx{
+	right:155px;
+}
+.rksh .grid-content .cx::before{
+	width: 20px;height: 20px;
+	content:url(../../img/rk/cx.png);
+	position:absolute;
+	left:10px; top:5px;
+}
+.rksh .grid-content .close{
+	left:140px;
+}
+.rksh .grid-content .close::before{
+	width: 20px;height: 20px;
+	content:url(../../img/rk/gb.png) ;
+		position:absolute;
+		left:10px; top:5px;
+}
+.rksh .grid-content .el-button span{
+	position: absolute;
+	left:40px; top:0;
+	width: 60px;
+	font-size:16px;
+	text-align: justify;
+	display: inline-block;
+
+}
+.rksh .el-table{
+	border:1px solid #6BC8FE;
+
+}
+.rksh .el-table tr{
+	height: 40px;
+}
+.rksh .el-table th{
+	border:1px solid #6BC8FE;
+	background: #cdecfd;
+
+}
+.rksh .el-table th>.cell {
+	background: #cdecfd;
+	text-align: center;
+	height: 100%;
+}
+.rksh .el-table td{
+	border:1px solid #6BC8FE;
+	background: #F8F8F8;
+}
+
+.rksh .el-table__header-wrapper {
+	height: 40px;
+}
+.rksh .el-form{
+	margin-left: 15px;
+}
+.rksh .pszx{
+	width: 50%;
+  	right:40px;
+}
+.rksh .yqbj{
+	position: relative;
+	/*left:145px;*/
+}
+.rksh .yq {
+  float: left;	
+  margin-left:10px;
+}
+.rksh .djbj{
+	position: relative;
+	/*left:125px*/
+}
+.rksh .djbh{
+	/*width: 190px;
+ 	right:0px;*/
+}
+.rksh .tongji{
+	height: 40px;
+	background: #CDECFD;
+	border:solid #36B5FC 1px;
+	position: relative;
+}
+.rksh .el-tag{
+	width: 155px;
+	height: 28px;
+	background: url('../../img/rk/yeqiandiji.png');
+	color:#000;
+	text-align: center;
+}
+.rksh .tag1{
+	position: absolute;
+	left:440px; top:5px;
+}
+.rksh .tag2{
+	position: absolute;
+	right:440px; top:5px;
+}
+.rksh .el-form span{
+	color:#5EC0FD;
+}
+.rksh .el-form .el-button span{
+	color:#000;
+}
+
+/*日期2至左外边距*/
+.rksh .searchnav .zhi{
+  margin-left: 30px;
+}
+/*查询与关于外边距*/
+.cx-gb{
+	margin-right: 26px;
+	float: right;
+}
+.rksh .searchnav .chaxun{
+  /*margin-left: 105px;*/
+}
+/*.rksh .aaa{*/
+  /*width: 202px;*/
+  /*right: 55px;*/
+/*}*/

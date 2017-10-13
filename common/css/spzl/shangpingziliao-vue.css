@@ -1,0 +1,170 @@
+﻿.shangping{
+	width: 750px;
+	height: 40px;
+	background-color: #36b4fe;
+	padding: 10px 30px 0 30px;
+	color:#fff;
+	font-size:18px ;
+	font-family:'微软雅黑';
+	
+}      
+.shangping .router{
+	height: 18px;
+	width: 18px;
+	float: right;
+}
+ .spzl{
+	width: 810px;
+}
+.shangping b{
+	width: 16px;
+	height: 16px;
+	background: url('../../img/rk/x.png');
+	margin-right: 30px;
+	margin-top:10px;
+}
+ .shangping .fr{
+	float:right;
+}
+.spzl .el-breadcrumb{
+	height: 44px;
+	width: 790px;
+	background: url('../../img/rk/caozuomoren.png');
+	padding-left:20px;
+}
+.spzl .right footer{
+	height: 24px;
+	background: #cdecfd;
+	border:1px solid blue;
+	margin-left:10px;
+}
+.spzl .tabletitle{
+	background: url(../../img/rk/yeqianxuanfu.png);
+	height: 40px;
+	position: relative;
+}
+.spzl .tabletitle p{
+	text-align: center;
+}
+ .spzl .ico1{
+	width: 20px;height: 20px;
+	background:url(../../img/rk/danjushezhi.png) ;
+	position: absolute;
+	left:0
+}
+.spzl .ico3{
+	width: 20px;
+	height: 20px;
+	background: url(../../img/rk/ss.png)no-repeat;
+	position: absolute;
+	left:0
+}
+.spzl .ico4{
+	width: 20px;
+	height: 20px;
+	background: url(../../img/rk/sc.png)no-repeat;
+	position: absolute;
+	left:0
+}
+.spzl .ico5{
+	width: 20px;
+	height: 20px;
+	background: url(../../img/rk/tuichu.png) no-repeat;
+	background-size: 20px 20px;
+	position: absolute;
+	left:0
+}
+.spzl .el-breadcrumb-item span{
+	display: inline-block;
+	
+}
+.spzl .el-breadcrumb__item .el-button{
+	min-width: 62px;
+	height: 22px;
+	line-height: 22px;
+	position: relative;
+	font-size: 14px;
+	display: inline-block;
+	padding-left:25px;
+	/*float: left;*/
+}
+.spzl .shangping .el-breadcrumb__item .el-input{
+	position: relative;
+	
+	border: none;
+	
+}
+.spzl .el-breadcrumb__item  .el-input  .el-input__inner{
+	margin-top: 10px;
+	height: 25px;
+	width: 100px;
+		border: none;
+}
+.spzl .el-breadcrumb__separator{position: relative;
+ top:10px }
+ .splz .inputkuang .el-breadcrumb__separator{
+ 	top:0!important;
+ }
+.spzl .ico6{
+	border:none;
+	display: inline-block;
+	background: url(../../img/rk/所有商品.png);
+	height: 10px;
+	width: 20px;
+	background-size: 20px 10px;
+}
+.spzl .left{
+	margin-top: 10px;
+	margin-right:10px;
+	color:#000;
+}
+.spzl .right{
+	margin-top: 10px;
+}
+.spzl .left .title{
+	font-size: 14px;
+	color:#000;
+	height: 25px;
+	width: 160px;
+	background: #CDECFE;
+	text-align: center;
+	
+}
+.spzl .tabletitle p{
+	font-size: 16px;
+	color:#000;
+	line-height: 40px;
+}
+.spzl .el-table__header-wrapper{
+	height: 25px;
+}
+.spzl .el-table__header-wrapper th{
+	background:#CDECFE;
+	border:#36B4FE 1px  solid;
+	height: 25px;
+	
+	font-size: 12px;
+}
+.spzl .el-table__header-wrapper th>.cell{
+	background:#CDECFE;
+height: 25px;
+	min-width: 72px;
+	padding: 0 5px 0 5px;
+	text-align: center;
+	position: relative;
+}
+.spzl .el-table td{
+	border:#36B4FE 1px  solid;
+	height: 25px;
+}
+.spzl .number{
+	margin-left: 15px;
+	height: 15px;
+	color:#000;
+	/*float: left;*/
+	margin-top:3px ;
+	width: 80px;
+	background: #C4EAFF;
+	border:1px solid #BAD5E0;
+}
+.spzl footer{  color:#000000; }

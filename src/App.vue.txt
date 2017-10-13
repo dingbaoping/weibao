@@ -1,0 +1,374 @@
+﻿<template>
+	
+
+	<div id="app">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--头部-->
+		<div class="head">
+			<div class="title">
+				仓储管理
+			</div>
+			<div class="navlist">
+				<ul>
+					<li>
+						<a href="#">系统皮肤</a>
+					</li>
+					<li>
+						<a href="#">锁定屏幕</a>
+					</li>
+					<li>
+						<a href="#">公司官网</a>
+					</li>
+					<li>
+						<a href="#">在线升级</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<!--头部结束-->
+		<!--主体DIV-->
+		<div id="main">
+			<!--左侧导航-->
+			<div class="leftnav">
+				<div class="title">主功能模块</div>
+				<ul>
+					<li class="click">
+						<i><img src="./assets/img/nav-rkdd.png"/> </i>
+						<a href="#">入库管理</a>
+					</li>
+					<li>
+						<i><img src="./assets/img/nav-rkdd.png"/> </i>
+						<a href="#">出库管理</a>
+					</li>
+				</ul>
+			</div>
+			<!--左侧导航结束-->
+			<!--右侧操作区域-->
+			<div class="rightwork">
+				<!--标签页-->
+				<div class="mainpage">
+					<el-tabs v-model="editableTabsValue2" type="card" @tab-click="clicktab" closable @tab-remove="removeTab">
+						<el-tab-pane v-for="(item, index) in editableTabs2" :router="item.content" :key="item.name" :label="item.title" :name="item.name">
+						</el-tab-pane>
+					</el-tabs>
+				</div>
+				<!--标签页结束-->
+				<!--中间内容部分-->
+				<div class="rightmain">
+					<router-view></router-view>
+				</div>
+				<!--中间内容部分结束-->
+			</div>
+			<!--右侧操作区域结束-->
+
+			<!--底部-->
+			<div class="bottom">
+				<ul>
+					<li>公司名称： 中国仓储事业部 </li>
+					<li>软件版本： V10.0.001</li>
+					<li>当前用户： WEB</li>
+					<li>组织机构：总部</li>
+					<li> 日期：2017年08月09日 </li>
+					<li>登录时间：9:02</li>
+				</ul>
+			</div>
+			<!--底部结束-->
+		</div>
+		<!--主体DIV结束-->
+
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'app',
+		data() {
+			return {
+				editableTabsValue2: '1',
+				editableTabs2: [{
+					title: '入库管理',
+					name: '1',
+					content: 'rkgl'
+				}, {
+					title: 'Tab 2',
+					name: '2',
+					content: 'main'
+				},
+				 {
+					title: '入库审核',
+					name: '3',
+					content: 'rksh'
+				},
+				 {
+					title: '订单审批',
+					name: '4',
+					content: 'ddsp'
+				},
+				 {
+					title: '入库退回捡货作业单时序簿',
+					name: '5',
+					content: 'rkthjhzyd'
+				},
+				  {
+					title: '入库退回捡货计划单时序簿',
+					name: '6',
+					content: 'rkthjhjhd'
+				},
+				   {
+					title: '上架作业单列表',
+					name: '7',
+					content: 'sjzyd'
+				},
+				  {
+					title: '收货计划单列表',
+					name: '8',
+					content: 'shjhd'
+				},
+				  {
+					title: '收库入库作业单',
+					name: '9',
+					content: 'skzy'
+				},
+				  {
+					title: 'alert1',
+					name: '9',
+					content: 'alert1'
+				},
+				{
+					title: 'alert2',
+					name: '10',
+					content: 'alert2'
+				},
+				{
+					title: '单据头设置',
+					name: '11',
+					content: 'djtsz'
+				},
+				{
+					title: '供应商弹窗',
+					name: '12',
+					content: 'gystc'
+				},
+				{
+					title: '商品弹窗',
+					name: '13',
+					content: 'spzl'
+				},
+				{
+					title: '地址弹窗',
+					name: '14',
+					content: 'dztc'
+				},
+				{
+					title: '合作方弹窗',
+					name: '15',
+					content: 'hzftc'
+				}
+				
+],				
+				tabIndex:13
+			}
+		},
+		mounted: function() {
+			mainheight();
+			rightwidth();
+			$(window).resize(function() {
+				mainheight();
+				rightwidth();
+			});
+		},
+		methods: {
+
+			removeTab(targetName) {
+				let tabs = this.editableTabs2;
+				let activeName = this.editableTabsValue2;
+				if(activeName === targetName) {
+					tabs.forEach((tab, index) => {
+						if(tab.name === targetName) {
+							let nextTab = tabs[index + 1] || tabs[index - 1];
+							if(nextTab) {
+								activeName = nextTab.name;
+							}
+						}
+					});
+				}
+
+				this.editableTabsValue2 = activeName;
+				this.editableTabs2 = tabs.filter(tab => tab.name !== targetName);
+			},
+			clicktab(targetName) {
+				var router = $(targetName.$el).attr("router");
+				this.$router.push({
+					name: router
+				});
+			}
+		}
+
+	}
+
+	function mainheight() {
+		var winheight = $(window).height();
+		winheight = winheight - 100 - 46 - 10 - 7; //head的高
+		$("#main").css("height", winheight);
+
+	};
+
+	function rightwidth() {
+		var winwidth = $(window).width();
+		winwidth = winwidth - 300;
+		$("#main>.rightwork").css("width", winwidth);
+	}
+</script>
+
+<style>
+	#app {
+		width: 100%;
+		max-height: 100%;
+	}
+	
+	#main {
+		width: 100%;
+		position: relative;
+		min-width: 1024px;
+	}
+	
+	.head {
+		background: #36b4fd;
+		height: 100px;
+		width: 100%;
+	}
+	
+	.head .title {
+		width: 340px;
+		heiht: 100px;
+		line-height: 100px;
+		font-size: 49px;
+		color: #fff;
+		text-align: center;
+		float: left;
+	}
+	
+	.navlist {
+		float: left;
+		width: 680;
+		height: 100px;
+		line-height: 100px;
+		font-size: 18px;
+	}
+	
+	.navlist ul li {
+		width: 100px;
+		height: 100px;
+		text-align: center;
+		float: left;
+	}
+	
+	.navlist ul li a {
+		color: #fff;
+	}
+	
+	.leftnav {
+		width: 214px;
+		margin-left: 30px;
+		border: 3px solid #cdecfd;
+		height: 100%;
+		margin-top: 10px;
+		overflow: hidden;
+	}
+	
+	.leftnav .title {
+		text-align: center;
+		width: 100%;
+		height: 49px;
+		line-height: 49px;
+		background: #cdecfd;
+	}
+	
+	.leftnav ul li {
+		height: 50px;
+		width: 100%;
+		line-height: 50px;
+		text-align: center;
+		position: relative;
+	}
+	
+	.leftnav ul li a {
+		color: #5f5f5f;
+		font-size: 16px;
+	}
+	
+	.leftnav ul li.click {
+		background: #36b4fd;
+	}
+	
+	.leftnav ul li.click a {
+		color: #fff;
+	}
+	
+	.leftnav ul li i {
+		width: 25px;
+		height: 25px;
+		top: 7px;
+		display: block;
+		float: left;
+		position: absolute;
+		left: 45px;
+	}
+	
+	.leftnav ul li i img {
+		width: 100%;
+	}
+	
+	.rightwork {
+		border: 3px solid #cdecfd;
+		height: 100%;
+		position: absolute;
+		left: 270px;
+		top: 0;
+	}
+	
+	.mainpage {
+		height: 49px;
+		width: 100%;
+		background: #cdecfd;
+	}
+	
+	.el-tabs__item {
+		padding: 0 30px;
+		height: 49px;
+		line-height: 49px;
+	}
+	
+	.el-tabs--card>.el-tabs__header .el-tabs__item.is-active.is-closable {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	
+	.el-tabs__header {
+		margin: 0;
+	}
+	
+	.rightmain {
+		height: 100%;
+		width: 100%;
+		overflow: auto;
+	}
+	
+	.bottom {
+		height: 35px;
+		background: #36b4fd;
+		border-top: 1px solid #cdecfd;
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+	}
+	.bottom ul li{
+		padding: 0 20px;
+		line-height: 35px; 
+		color: #fff;
+		float: left;
+		font-size: 14px;
+	}
+</style>

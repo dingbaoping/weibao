@@ -1,0 +1,1566 @@
+<template>
+	<!--HTML代码写这个标签里面-->
+	<div class="rkgl" style="position:relative">
+		<form class="page2">
+			<!--第二页-->
+			<!--<div class=>-->
+			<!-- element步骤组件 -->
+			<div class="select_box">
+
+				<!-- 这里是导航栏部分 -->
+				<div class="but-box">
+					<ul>
+						<li>
+							<div class="boxtab" @click="saveOrder">
+								<div class="curbox bc">
+									<span>保存</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="boxtab">
+								<div class="curbox bcsh" @click="saveAndAudit">
+									<span>保存审核</span>
+								</div>
+							</div>
+							<span class="gun"></span>
+						</li>
+						<li>
+							<div class="boxtab">
+								<div class="curbox syt">
+									<span>上一条</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="boxtab">
+								<div class="curbox xyt">
+									<span>下一条</span>
+								</div>
+							</div>
+							<span class="gun"></span>
+						</li>
+						<li>
+							<div class="boxtab">
+								<div class="curbox djsz" @click='djt_Click=true'>
+									<span>单据设置</span>
+								</div>
+							</div>
+							<span class="gun"></span>
+						</li>
+						<li>
+							<div class="boxtab">
+								<div class="curbox dy">
+									<span>打印</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="boxtab" @click="getTotal">
+								<div class="curbox yl">
+									<span>预览</span>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="boxtab">
+								<div class="curbox cz">
+									<!-- <span>操作</span> -->
+									<el-dropdown split-button @click="handleClick">
+										操作
+										<el-dropdown-menu slot="dropdown">
+											<el-dropdown-item>打印商品条码</el-dropdown-item>
+										</el-dropdown-menu>
+									</el-dropdown>
+								</div>
+							</div>
+							<span class="gun"></span>
+						</li>
+
+						<li>
+							<div class="boxtab">
+								<div class="curbox sh" @click="auditOrder">
+									<span>审核</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="boxtab">
+								<div class="curbox fs" @click="antiOrder">
+									<span>反审</span>
+								</div>
+							</div>
+							<span class="gun"></span>
+						</li>
+						<li>
+							<div class="boxtab">
+								<slot name="bqytc"></slot>
+
+							</div>
+							<span class="gun"></span>
+						</li>
+					</ul>
+				</div>
+				<!-- 这里是导航栏部分结束 -->
+
+				<!--分栏布局-->
+				<!--标签页标题-->
+				<h1 class="center">入库订单</h1>
+				<!--功能选单部分-->
+
+				<el-row :gutter="10" type="flex">
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<p>配送中心*：</p>
+
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<!-- 配送中心列表 -->
+							<el-select v-model="peisong" @change="pschange" filterable placeholder="" class=" blueborder input_width" :disabled="pszx">
+								<el-option id="pszx" v-for="item in cities" :key="item.DCID" :label="item.DCName" :value="item.DCID">
+									<span style="float: left">{{ item.DCName }}</span>
+								</el-option>
+							</el-select>
+							<!-- 配送中心列表结束 -->
+						</div>
+					</el-col>
+					<el-col :xs="2" :sm="2" :md="2" :lg="2">
+						<div class="grid-content  ">
+							<p>园区*：</p>
+
+						</div>
+						<!--<div class="grid-content  ">
+
+						</div>-->
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<!-- 园区列表 -->
+							<el-select v-model="yuanqu" placeholder="" no-data-text="23132" class=" blueborder input_width">
+								<el-option id="yqlb" v-for="item in yqlist" :key="item.ParkID" :label="item.ParkName" :value="item.ParkID">
+									<span style="float: left">{{ item.ParkName }}</span>
+								</el-option>
+							</el-select>
+							<!-- 园区列表 -->
+						</div>
+						<!--<div class="grid-content  ">
+
+						</div>-->
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<p>订单编号：</p>
+
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<el-input v-model="ddbh" placeholder="" class=" blueborder yuandanhao input_width"></el-input>
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<p>订单日期*：</p>
+
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<!-- 订单日期 -->
+							<div class=" blueborder input_width">
+								<el-date-picker v-model="ddrq" id="ddrq" align="right" type="date" placeholder="选择日期" :picker-options="pickerOptions1" class='input_width'>
+								</el-date-picker>
+							</div>
+							<!-- 订单日期结束 -->
+						</div>
+					</el-col>
+				</el-row>
+				<el-row :gutter="10" type="flex">
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<p class='hzfvalue'>合作方*：</p>
+
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<el-input class=" blueborder input_width" id="hzfEnter" placeholder="" icon="search" v-model="hzf" @click="hzf_Click = true">
+							</el-input>
+						</div>
+					</el-col>
+					<el-col :xs="2" :sm="2" :md="2" :lg="2">
+						<div class="grid-content  ">
+							<p>供应商*：</p>
+
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+
+							<el-input class=" blueborder input_width" placeholder="" icon="search" v-model="gys" @click="gys_Click = true"></el-input>
+
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<p>入库类型*：</p>
+
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<el-select placeholder="" v-model="rklx" class=" blueborder input_width">
+								<el-option v-for="item in rklxs" :key="item.value" :label="item.label" :value="item.value">
+									<span style="float: left">{{ item.label }}</span>
+								</el-option>
+							</el-select>
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+
+							<p>预计到货时间：</p>
+
+						</div>
+
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<!-- 预计到货时间 -->
+							<div class="block  blueborder input_width">
+								<el-date-picker id="dhsj" v-model="dhsj" align="right" type="date" placeholder="选择日期" :picker-options="pickerOptions1" class='input_width'>
+								</el-date-picker>
+							</div>
+							<!-- 预计到货时间结束 -->
+						</div>
+
+					</el-col>
+				</el-row>
+				<el-row :gutter="10" type="flex">
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<p>交货方式：</p>
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<el-select v-model="jhfs" placeholder="" class=" blueborder input_width">
+								<el-option v-for="item in jhfss" :key="item.value" :label="item.label" :value="item.value">
+									<span style="float: left">{{ item.label }}</span>
+								</el-option>
+							</el-select>
+						</div>
+
+					</el-col>
+					<el-col :xs="2" :sm="2" :md="2" :lg="2">
+						<div class="grid-content  ">
+							<p>源单号：</p>
+
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+
+							<el-input v-model="ydh" placeholder="" class=" input_width"></el-input>
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<p>运输方式：</p>
+
+						</div>
+
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+
+							<el-select v-model="ysfs" placeholder="" class=" blueborder input_width">
+								<el-option v-for="item in ysfss" :key="item.value" :label="item.label" :value="item.value">
+									<span style="float: left">{{ item.label }}</span>
+								</el-option>
+							</el-select>
+						</div>
+
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<p>提交状态：</p>
+
+						</div>
+					</el-col>
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<el-select v-model="tjzt" placeholder="" class=" input_width">
+								<el-option v-for="item in tjzts" :key="item.value" :label="item.label" :value="item.value">
+									<span style="float: left">{{ item.label }}</span>
+								</el-option>
+							</el-select>
+
+						</div>
+					</el-col>
+				</el-row>
+
+				<el-row :gutter="10" type="flex">
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content ">
+							<p class="duliw">地址：</p>
+
+						</div>
+					</el-col>
+					<el-col :xs="8" :sm="8" :md="8" :lg="8">
+						<div class="grid-content ">
+
+							<el-input v-model="dz" disabled placeholder="" icon="search" class='fr blueborder dizhi input_width' @click='dizhi_Click=true'></el-input>
+						</div>
+					</el-col>
+
+				</el-row>
+				<el-row :gutter="10" type="flex">
+					<el-col :xs="3" :sm="3" :md="3" :lg="3">
+						<div class="grid-content  ">
+							<p class="duliw">备注：</p>
+						</div>
+					</el-col>
+					<el-col :xs="8" :sm="8" :md="8" :lg="8">
+						<div class="grid-content  ">
+							<el-input v-model="bz" placeholder="" class='fr blueborder dizhi input_width'></el-input>
+						</div>
+					</el-col>
+				</el-row>
+			</div>
+			<!--功能选单部分结束-->
+
+			<!--商品表格部分-->
+			<el-table :data="splbs"  border style="width:100%" id="spbg" class='spbg' min-height="300" max-height="310" @cell-dblclick="dbHandle"  @row-contextmenu="rowDelect" @cell-click="tbclick"  @current-change="dbchange" >
+
+				<el-table-column type="index"  class="index" label="序号" width="100" fixed sortable>
+				</el-table-column>
+
+				<el-table-column prop="Code" label="商品编码" width="110" class-name="Code bianji" v-model='spbm'>
+					<!-- 可编辑写法start -->
+					<template scope="scope">
+						<div v-show="!scope.row.CodeEdit" >{{scope.row.Code}}</div>
+						<el-input v-show="scope.row.CodeEdit" v-model="scope.row.Code" @keyup.native.enter="codeEnter(scope)" @blur="codeChange(scope)"></el-input>
+					</template>
+					<!-- 可编辑写法end -->
+				</el-table-column>
+
+				<el-table-column prop="" label="" width="24">
+					<template scope="scope">
+						<span class='blue_button' @click="lookShop"></span>
+					</template>
+				</el-table-column>
+
+				<el-table-column prop="Name" label="商品名称" width="280">
+				</el-table-column>
+
+				<el-table-column prop="Model" label="规格型号" width="144">
+				</el-table-column>
+
+				<el-table-column prop="Num" class-name="Num bianji" label="基本数量" width="104">
+					<!-- 可编辑写法start -->
+					<template scope="scope">
+						<div v-show="!scope.row.NumEdit" >{{scope.row.Num}}</div>
+						<el-input v-show="scope.row.NumEdit" v-model="scope.row.Num" @blur="numChange(scope)"></el-input>
+					</template>
+					<!-- 可编辑写法end -->
+				</el-table-column>
+
+				<el-table-column prop="Unit" label="基本单位" width="104">
+				</el-table-column>
+
+				<el-table-column prop="Price" label="价格 " class-name="bianji" width="104" sortable>
+					<!-- 可编辑写法start -->
+					<template scope="scope">
+						<div v-show="!scope.row.PriceEdit" >{{scope.row.Price}}</div>
+						<el-input v-show="scope.row.PriceEdit" v-model="scope.row.Price" @blur="priceChange(scope)"></el-input>
+					</template>
+					<!-- 可编辑写法end -->
+				</el-table-column>
+
+				<el-table-column prop="SupNum" class-name="SupNum bianji" label="辅助数量" width="104">
+					<!-- 可编辑写法start -->
+					<template scope="scope">
+						<div v-show="!scope.row.SupNumEdit"  >{{scope.row.SupNum}}</div>
+						<el-input v-show="scope.row.SupNumEdit" v-model="scope.row.SupNum" @blur="supNumChange(scope)"></el-input>
+					</template>
+					<!-- 可编辑写法end -->
+				</el-table-column>
+
+				<el-table-column prop="SupUnit" label="辅助单位" width="104">
+				</el-table-column>
+
+				<el-table-column prop="SupPrice" label="辅助价格" class-name="bianji" width="104">
+					<!-- 可编辑写法start -->
+					<template scope="scope">
+						<div v-show="!scope.row.SupPriceEdit"  >{{scope.row.SupPrice}}</div>
+						<el-input v-show="scope.row.SupPriceEdit" v-model="scope.row.SupPrice" @blur="supPriceChange(scope)"></el-input>
+					</template>
+					<!-- 可编辑写法end -->
+				</el-table-column>
+
+				<el-table-column prop="IsFree" label="赠品标志" width="104" class-name="bianji">
+					<template scope="scope">
+						<el-select v-model="splbs[scope.$index].IsFree" placeholder="非赠品">
+							<el-option v-for="item in shifouZP" :key="item.value" :label="item.label" :value="item.value">
+								<span style="float: left">{{ item.label }}</span>
+							</el-option>
+						</el-select>
+					</template>
+				</el-table-column>
+
+				<el-table-column prop="Total" label="合计" class-name="total" width="118">
+				</el-table-column>
+
+				<el-table-column prop="Remarks" label="备注" class-name="Remarks bianji">
+					<!-- 可编辑写法start -->
+					<template scope="scope">
+						<div v-show="!scope.row.RemarksEdit" >{{scope.row.Remarks}}</div>
+						<el-input v-show="scope.row.RemarksEdit" v-model="scope.row.Remarks"  @blur="remarksChange(scope)"></el-input>
+					</template>
+					<!-- 可编辑写法end -->
+				</el-table-column>
+			</el-table>
+			<!--第二表格-->
+			<ul class='heji_ul'>
+				<li><span>合计</span></li>
+				<li><span></span></li>
+				<li><span>辅助合计</span></li>
+				<li><span style="color:red">{{ isNaN(getBasicAmount) ? 0.00 : getBasicAmount }}</span></li>
+				<li><span>数量合计</span></li>
+				<li><span style="color:red">{{ isNaN(getAuxiliaryNumber) ? 0.00 : getAuxiliaryNumber}}</span></li>
+				<li><span>金额合计</span></li>
+				<li><span style="color:red">{{ isNaN(getTotalPrice) ? 0.00 : getTotalPrice}}</span></li>
+			</ul>
+			<!--第二表单-->
+			<div class='form-2'>
+				<el-form :inline="true" v-model="formInline" class="demo-form-inline">
+					<el-form-item label="部门" class='fl'>
+						<el-select v-model="bumen" placeholder="" class='fr input_width button_w'>
+							<el-option label="区域一" value="shanghai"></el-option>
+							<el-option label="区域二" value="beijing"></el-option>
+						</el-select>
+					</el-form-item>
+				</el-form>
+				<el-form :inline="true" v-model="formInline" class="demo-form-inline">
+					<el-form-item label="采购员" class='fl'>
+						<el-input v-model="caigouyuan" placeholder="" class='fr input_width button_w'></el-input>
+					</el-form-item>
+					<el-form-item label="制单人" class='fl'>
+						<el-input v-model="zhidanren" placeholder="" disabled class='fr input_width button_w'></el-input>
+					</el-form-item>
+					<el-form-item label="审核人" class='fl'>
+						<el-input v-model="shenheren" placeholder="" disabled class='fr input_width button_w'></el-input>
+					</el-form-item>
+					<el-form-item label="审核日期" class='fl'>
+						<el-input v-model="shenherq" placeholder="" disabled class='fr input_width button_w'></el-input>
+					</el-form-item>
+				</el-form>
+			</div>
+			<div class="blue">
+				<div class='fl'>就绪</div>
+			</div>
+			<!--下面全是dialog-->
+
+			<!--合作方弹窗-->
+			<el-dialog title="选择合作方" class="hzf" :visible.sync="hzf_Click" size="tiny" :before-close="handleClose">
+				<hzftc :DCID="peisong" :hzfstr="hzf" @checkgethzfInfo="checkgethzfInfo" @gethzfInfo="gethzf" ref="hzftcvue">
+					<div slot="close" @click="hzf_Click=false" class="boxtab">
+						<div class="curbox tc"><span>关闭</span></div>
+					</div>
+				</hzftc>
+				<span slot="footer" class="dialog-footer">
+					<el-button @click="hzf_Click = false">取 消</el-button>
+					<el-button type="primary"  @click="checkgethzfdizhi(hzfInfo)">确 定</el-button>
+				</span>
+			</el-dialog>
+			<!--合作方弹窗 end-->
+			
+			<!--供应商-->
+			<el-dialog title="选择供应商" class="gys" :visible.sync="gys_Click" size="tiny" :before-close="handleClose">
+				<gystc :ParID="hzfid" :gysstr="gys" @getgysInfo="getgys" @checkgetgysInfo="checkgetgysInfo">
+					<div slot="close" @click="gys_Click=false" class="boxtab">
+						<div class="curbox tc"><span>关闭</span></div>
+					</div>
+				</gystc>
+
+				<span slot="footer" class="dialog-footer gys-footer" style=' top:480; left:730'>
+					<!--<el-button @click="hzf_Click = false">取 消</el-button>-->
+					<el-button @click="gys_Click = false">取 消</el-button>
+					<el-button type="primary" @click="checkgetgysdizhi(gysInfo)">确 定</el-button>
+				</span>
+			</el-dialog>
+			<!--供应商弹窗 end-->
+
+			<el-dialog title="" :visible.sync="djt_Click" size="tiny" :before-close="handleClose">
+				<djttc></djttc>
+				<span slot="footer" class="dialog-footer">
+					<el-button @click="djt_Click = false">取 消</el-button>
+					<el-button type="primary" @click="djt_Click = false">确 定</el-button>
+				</span>
+			</el-dialog>
+			<!--单据设置 end-->
+
+			<!--地址弹窗-->
+			<el-dialog title="选择地址" class="dizhi" :visible.sync="dizhi_Click" size="tiny" :before-close="handleClose">
+				<dztc @getAddr="setAddr"></dztc>
+				<span slot="footer" class="dialog-footer">
+					<el-button @click="dizhi_Click = false">取 消</el-button>
+					<el-button type="primary"  @click="addrClick" >确 定</el-button>
+				</span>
+			</el-dialog>
+			<!--地址弹窗 end -->
+
+			<!-- 删除确认-->
+			<el-dialog title="提示" id="isDelect" class="sfsc" :visible.sync="sfsc_Click" size="tiny" :before-close="handleclose">
+				<span class="dialog-footer">
+				<p>是否删除当前行</p>
+				<el-button type="primary"  @click="isDelect" >确 定</el-button>
+				<el-button @click="sfsc_Click = false">取 消</el-button>
+				</span>
+			</el-dialog>
+			<!--删除确认 end -->
+
+			<!-- 商品资料弹窗-->
+			<el-dialog title="商品资料" class="spzl" :visible.sync="spzl_Click" size="tiny" :before-close="handleClose">
+				<spzl :spstr="spStr" :sphzf="hzf" :sphzfID="hzfid" @proSelect="setProduct">
+					<div slot="close" @click="spzl_Click=false" class="boxtab">
+						<div class="curbox tc"><span>退出</span></div>
+					</div>
+				</spzl>
+			</el-dialog>
+			<!--商品资料弹窗 end --
+
+			<!--成功-->
+			<el-dialog style="text-align:center" title="系统提示" :visible.sync="bccg_Click" size="tiny" :before-close="handleClose" class='bccg'>
+				<!-- <span slot="footer" class="dialog-footer"> -->
+				<!-- 保存信息 -->
+				<p style="color:red">{{ this.bcxx }}</p>
+				<el-button type="primary" style="" class='dialog_ok' @click.native="bccg_Click = false">确 定</el-button>
+				<!-- </span> -->
+			</el-dialog>
+
+			<!--失败-->
+			<el-dialog style="text-align:center" title="系统提示" :visible.sync="bcsb_Click" size="tiny" :before-close="handleClose" class='bcsb'>
+				<!-- <span slot="footer" class="dialog-footer"> -->
+				<!-- 保存信息 -->
+				<p style="color:red">{{ this.bcxx }}</p>
+				<el-button type="primary" style="" class='dialog_ok' @click.native="bcsb_Click = false">确 定</el-button>
+				<!-- </span> -->
+			</el-dialog>
+
+			<!--警告2-->
+			<el-dialog title="" :visible.sync="dytm_Click" size="tiny" :before-close="handleClose" id='alert1'>
+				<div class='tm_body'>
+					<nav>
+						<button class='dy'>
+							<i class='ico12'></i>打印</button>
+						<button class='close'>
+							<i class="ico13"></i>退出</button>
+					</nav>
+
+					<div class="table_dialog">
+						<el-table ref="multipleTable" :data="tableData3" border tooltip-effect="dark" style="width: 100%">
+
+							<el-table-column prop="name" label="" width="55">
+							</el-table-column>
+							<el-table-column type="selection" width="55">
+							</el-table-column>
+							<el-table-column label="编号" width="120">
+								<template scope="scope">{{ scope.row.date }}</template>
+							</el-table-column>
+							<el-table-column prop="name" label="商品名称" width="120">
+							</el-table-column>
+							<el-table-column prop="address" label="条形码" width='auto'>
+							</el-table-column>
+							<el-table-column prop="address" label="规格型号" width='auto'>
+							</el-table-column>
+							<el-table-column prop="address" label="仓位" width='auto'>
+							</el-table-column>
+							<el-table-column prop="address" label="基本单位" width='auto'>
+							</el-table-column>
+							<el-table-column prop="address" label="基本数量" width='auto'>
+							</el-table-column>
+							<el-table-column prop="address" label="打印数量" width='auto'>
+							</el-table-column>
+						</el-table>
+					</div>
+				</div>
+				<span slot="footer" class="dialog-footer">
+					<el-button @click="dytm_Click = false">取 消</el-button>
+					<el-button type="primary" class='dialog_ok' @click.native="dytm_Click = false">确 定</el-button>
+				</span>
+			</el-dialog>
+
+			<!--操作弹框-->
+			<el-dialog title="" :visible.sync="yulan_Click" size="tiny" :before-close="handleClose" id='alert1'>
+				<div class='tm_body'>
+					<nav>
+						<button class='dy'>
+							<i class='ico12'></i>打印</button>
+						<button class='close'>
+							<i class="ico13"></i>退出</button>
+					</nav>
+					<div class="table_dialog">
+						<el-table ref="multipleTable" :data="tableData3" border tooltip-effect="dark" style="width: 100%">
+							<el-table-column prop="name" label="" width="55">
+							</el-table-column>
+							<el-table-column type="selection" width="55">
+							</el-table-column>
+							<el-table-column label="编号" width="120">
+								<template scope="scope">{{ scope.row.date }}</template>
+							</el-table-column>
+							<el-table-column prop="name" label="商品名称" width="120">
+							</el-table-column>
+							<el-table-column prop="address" label="条形码" width='auto'>
+							</el-table-column>
+							<el-table-column prop="address" label="规格型号" width='auto'>
+							</el-table-column>
+							<el-table-column prop="address" label="仓位" width='auto'>
+							</el-table-column>
+							<el-table-column prop="address" label="基本单位" width='auto'>
+							</el-table-column>
+							<el-table-column prop="address" label="基本数量" width='auto'>
+							</el-table-column>
+							<el-table-column prop="address" label="打印数量" width='auto'>
+							</el-table-column>
+						</el-table>
+					</div>
+				</div>
+				<span slot="footer" class="dialog-footer">
+					<el-button @click="hzf_Click = false">取 消</el-button>
+					<el-button type="primary" class='dialog_ok' @click.native="hzf_Click = false">确 定</el-button>
+				</span>
+			</el-dialog>
+      <!--成功-->
+			<el-dialog style="text-align:center" title="系统提示" :visible.sync="bccg_Click" size="tiny" :before-close="handleClose" class='bccg'>
+			  <span class="dialog-footer">
+				<p>{{ this.infoHint }}</p>
+				<el-button type="primary" style="" class='dialog_ok' @click.native="bccg_Click = false">确 定</el-button>
+				<!-- </span> -->
+				</span>
+			</el-dialog>
+			<router-view class="view"></router-view>
+		</form>
+	</div>
+</template>
+<script src="../../common/js_nicescroll/jquery.nicescroll.js"></script>
+<!--<link rel="stylesheet" href="../../common/jsui/jquery-ui-1.12.1/jquery-ui.css">-->
+<script>
+</script>
+<script>
+	import $ from 'jquery'
+	import hzftc from './hzftc.vue';
+	import gystc from './gystc.vue';
+	import djttc from './djtsztc.vue';
+	import spzl from './tanchuanghz/spnbtc.vue';
+	import dztc from './dztc.vue';
+	import alert1 from './alert1.vue'
+	import alert2 from './alert2.vue'
+	import nicescroll from '../../common/js_nicescroll/jquery.nicescroll.js'
+	//	import url('../../common/jsui/jquery-ui-1.12.1/jquery-ui.min.js')
+	import printArea from '../../common/js/jsprint.js'
+	export default {
+
+		components: {
+			'hzftc': hzftc,
+			'gystc': gystc,
+			'djttc': djttc,
+			'dztc': dztc,
+			'alert1': alert1,
+			'alert2': alert2,
+			'spzl': spzl,
+		},
+		watch: {},
+
+		data() {
+			return {
+				//这是内部的参数可以调用
+				djt_Click: false,
+				spzl_Click: false, //商品资料
+				hzf_Click: false,
+				bccg_Click: false, //保存成功
+				bcsb_Click: false, //保存失败
+				gys_Click: false,
+				dizhi_Click: false,
+				bccg_Click: false, // 保存提示信息
+				alert1_Click: false,
+				alert2_Click: false,
+				dytm_Click: false,
+				yulan_Click: false,
+				sfsc_Click: false, // 是否删除
+				delIndex: 0,
+				cities: [],
+				infoHint: '', // 提示信息
+				pszx: false,
+				peisong: '',
+				hzfInfo: [],
+				gysInfo: [], // 供应商组件传过来的数据
+				isOnce: true, // 只执行一次
+				gys: "", // 供应商
+				bcxx: '保存成功', // 保存信息
+				spStr: '', //商品编码
+				StorageID: '', //保存单据编号
+				enterFlag: '', // 回车状态
+				splbs: [{
+				}],
+				getBasicAmount: '',
+				getAuxiliaryNumber: '',
+				getTotalPrice: '',
+				yuanqu: '',
+				Addr: {
+					"a": 1
+				}, // 存放地址信息
+				tableData3: "",
+				hzfid: "dedede",
+				gysid: '', // 供应商ID 
+				lookShopNum: "", //记录点击小方块时选中的是第几行
+				lookShopCell: "",
+				pickerOptions0: {
+					disabledDate(time) {
+						return time.getTime() < Date.now() - 8.64e7;
+					}
+				},
+				pickerOptions1: {
+					shortcuts: [{
+						text: '今天',
+						onClick(picker) {
+							picker.$emit('pick', new Date());
+						}
+					}, {
+						text: '昨天',
+						onClick(picker) {
+							const date = new Date();
+							date.setTime(date.getTime() - 3600 * 1000 * 24);
+							picker.$emit('pick', date);
+						}
+					}, {
+						text: '一周前',
+						onClick(picker) {
+							const date = new Date();
+							date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+							picker.$emit('pick', date);
+						}
+					}]
+				},
+				ddbh: '',
+				yqlist: [],
+				loading: false, //表格加载中的变量
+				rklxs: [ // 入库类型
+					{
+						value: '1',
+						label: '正常入库'
+					},
+					{
+						value: '2',
+						label: '入库退回'
+					}
+				],
+				jhfss: [ // 交货方式
+					{
+						value: '1',
+						label: '到岸'
+					},
+					{
+						value: '2',
+						label: '派车'
+					}
+				],
+				tjzts: [ // 提交状态
+					{
+						value: '1',
+						label: '未提交'
+					},
+					{
+						value: '2',
+						label: '提交'
+					}
+				],
+				ysfss: [ // 运输方式
+					{
+						value: '1',
+						label: '汽运'
+					},
+					{
+						value: '2',
+						label: '铁运'
+					},
+					{
+						value: '3',
+						label: '海运'
+					},
+					{
+						value: '4',
+						label: '空运'
+					}
+				],
+
+				types2: [],
+
+				hzf: '', //合作方
+				Pr: [], //商品列表
+				rklx: "1",
+				jhfs: "1",
+				ysfs: "1",
+				ydh: "",
+				dz: "",
+				bz: "",
+				ddrq: "",
+				dhsj: "",
+				tjzt: "2",
+				spbm: '',
+				caigouyuan: '', // 采购员
+				zhidanren: isNaN(window.userName) ? window.userName : "", // 制单人
+				shenheren: '', // 审核人
+				shenherq: '', // 审核日期
+				bumen: '', // 部门
+				tableData: [],
+				formInline: {
+					user: '',
+					region: ''
+				},
+				shifouZP: [{
+					value: '1',
+					label: '赠品'
+				}, {
+					value: '0',
+					label: '非赠品'
+				}],
+				SFcomplimentary: "",
+				getBasicAmount: '', // 数量合计
+				getAuxiliaryNumber: '', // 辅助合计
+				getTotalPrice: '', // 金额合计
+			}
+		},
+
+		mounted: function() {
+
+			//这个方法类似于juqery里面的$(document).ready()
+			var that = this;
+			//订单日期的默认值
+			var myDate = new Date();
+			var y = myDate.getFullYear(); //获取完整的年份(4位,1970-????)
+			var m = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
+			var d = myDate.getDate(); //获取当前日(1-31)
+			var today = y + "-" + m + "-" + d;
+			that.ddrq = today;
+			that.dhsj = today;
+
+			that.getdclist();
+			that.getTotal();
+			// 回车直接删除商品
+			$(window).on("keydown", function(e) {
+				// 1.如果是删除商品弹窗
+				if(that.sfsc_Click && e.key == "Enter") {
+					that.isDelect();
+				}
+				// 2.如果是备注
+				else if(that.enterFlag == "Remarks" && e.key == "Enter") {
+					that.splbs[that.splbs.length - 1].Code && that.splbs.push({
+						Code: ''
+					});
+				}
+				// 3.如果是编码
+				else if(that.enterFlag == "Code" && e.key == "Enter" && that.hzf != '') {
+					that.spzl_Click = true; //显示商品框
+				} else {
+					return
+				}
+			});
+
+			$("#hzfEnter").on('keydown', function(e) {
+				if(e.key == 'Enter') {
+					that.hzf_Click = true;
+					// 当前状态为回车
+				}
+			})
+
+			$('html').on('click', '.ok', function() {
+				that.djt_Click = false;
+				that.hzf_Click = false;
+				that.gys_Click = false;
+				that.dizhi_Click = false;
+				that.alert1_Click = false;
+				that.alert2_Click = false;
+			});
+			$('html').on('click', '.close', function() {
+				that.djt_Click = false;
+				that.hzf_Click = false;
+				that.gys_Click = false;
+				that.dizhi_Click = false;
+				that.alert1_Click = false;
+				that.alert2_Click = false;
+			});
+			// 打印
+			$('html').on('click', '.rkgl .dy', function() {
+				$('#spbg').printArea();
+			});
+			$('html').on('click', '.rkgl .el-breadcrumb-item .close', function() {
+				$('.rkgl').hide();
+
+			});
+
+			setTimeout(function() {
+				that.loading = false;
+			}, 3000);
+			//没数据的时候加载示意，有数据的时候注释掉
+		},
+		methods: {
+			codeEnter (scope) {
+				// console.log(939,scope);
+				this.spStr = scope.row.Code;
+			},
+      //单元格双击，开启可编辑
+      dbHandle:function(row, column, cell, event){
+        let key = column.property+'Edit'; // CodeEdit
+				this.$set(row, key, !row[key]);
+				// row.CodeEdit = true;
+        setTimeout(()=>{
+          try{
+            $("input",cell).focus();
+          }catch(err){
+          }
+        },100);
+      },
+			// 备注改变时
+			remarksChange (scope) {
+				scope.row.RemarksEdit = false; 
+			},
+			// 商品编码改变时
+			codeChange (scope) {
+				scope.row.CodeEdit = false; 
+				this.spStr = this.splbs[this.lookShopNum].Code; //设置搜索字段
+				this.getTotal()
+			},
+			// 基本数量改变时
+			numChange (scope) {
+				scope.row.NumEdit = false;
+				// 更新辅助数量
+				scope.row.SupNum = scope.row.Num / scope.row.ConvRate || 0 ;
+				scope.row.Total = scope.row.Num * scope.row.Price ; //更新总价
+				this.getTotal()
+			},
+			// 基本价格改变时
+			priceChange (scope) {
+				scope.row.PriceEdit = false;
+				scope.row.SupPrice = scope.row.Price * scope.row.ConvRate || 0; 
+				scope.row.Total = scope.row.Num * scope.row.Price ; //更新总价
+				this.getTotal()
+			},
+			// 辅助数量改变时
+			supNumChange (scope) {
+				scope.row.SupNumEdit = false;
+				// console.log(1435,scope)
+				//  改变基本数量
+				scope.row.Num = scope.row.SupNum * scope.row.ConvRate || 0; 
+				scope.row.Total = scope.row.Num * scope.row.Price ; //更新总价
+				this.getTotal()
+			},
+			// 辅助价格改变时
+			supPriceChange (scope) {
+				// debugger;
+				scope.row.SupPriceEdit = false;
+				// 改变基本价格
+				scope.row.Price = scope.row.SupPrice / scope.row.ConvRate || 0; 
+				scope.row.Total = scope.row.Num * scope.row.Price ; //更新总价
+				this.getTotal()
+			},
+
+			dbchange(val) {
+				// console.log(val);
+			},
+			 //合作方发生改变时执行该方法
+			lookShop() {
+				if(!this.hzf) {
+					this.bcxx = "请选择合作方";
+					this.bcsb_Click = true; // 提示
+					return
+				} else {
+					this.spzl_Click = true;
+				}
+			},
+			// 合作方发生改变时执行该方法
+			getgysInfo() {
+				var that = this;
+				that.baseAjax("suppliergetlist", {
+					UserID: window.userid,
+					ParID: that.hzfid
+				}, function(data) {
+					var obj = eval('(' + data + ')');
+					var datas = JSON.parse(obj.Datas);
+					var data = datas.Data;
+					that.gys = data[0].Name;
+					that.gysid = data[0].InterID;
+				});
+			},
+			getgys(val) {
+				// console.log(val);//想要什么数据都在这个val里面拿
+				this.gys = val.Name;
+				this.gysid = val.InterID;
+				this.gys_Click = false; //关闭弹出框
+			},
+			toggleSelection(rows) {
+				if(rows) {
+					rows.forEach(row => {
+						this.$refs.multipleTable.toggleRowSelection(row);
+					});
+				} else {
+					this.$refs.multipleTable.clearSelection();
+				}
+			},
+			// 双击拿到合作方数据
+			gethzf(val) {
+				this.pszx = true; // 配送输入框禁用
+				this.hzfid = val.InterID;
+				this.hzf = val.Name;
+				this.hzf_Click = false; //关闭弹出框
+				this.getgysInfo();
+				// 请求供应商
+				this.getgyslist();
+			},
+			// 获取供应商的数据
+			getgyslist: function() {
+				var that = this;
+				that.baseAjax("suppliergetlist", {
+					UserID: window.userid,
+					ParID: this.hzfid
+				}, function(data) {
+					var obj = eval('(' + data + ')');
+					var datas = JSON.parse(obj.Datas);
+					var data = datas.Data;
+					// console.log(data);
+
+					if(data.length) { // 如果有数据
+						that.gys = data[0].Name;
+					} else {
+						that.gys = '';
+					}
+				});
+			},
+			// 合作方单选拿到数据，存入数组
+			checkgethzfInfo(data) {
+				this.hzfInfo = data;
+			},
+			// 合作方确定调用这个方法，传入存储的数据
+			checkgethzfdizhi(info) {
+				this.pszx = true; // 配送输入框禁用
+
+				// console.log(info);
+				this.hzf = info.Name
+				this.hzfid = info.InterID;
+				this.hzf_Click = false;
+				this.getgysInfo();
+			},
+			// 发送广播
+			getgys() {
+				this.$on("gethzfInfo", function(val) {
+				})
+			},
+			// 供应单单选拿到数据，存入数组
+			checkgetgysInfo(data) {
+				this.gysInfo = data;
+			},
+			// 供应商确定调用这个方法，传入存储的数据
+			checkgetgysdizhi(info) {
+				this.gys = info.Name
+				this.gysid = info.InterID;
+				this.gys_Click = false;
+			},
+			handleClose(done) {
+				this.$confirm('确认关闭？')
+					.then(_ => {
+						done();
+					})
+					.catch(_ => {});
+			},
+			// 获取配送中心列表
+			getdclist: function() {
+				var that = this;
+				that.baseAjax("getdclist", {
+					UserID: window.userid
+				}, function(data) {
+					var obj = eval('(' + data + ')');
+					var datas = JSON.parse(obj.Datas);
+					var data = datas.Data;
+					that.cities = data;
+					that.peisong = data[0].DCID;
+				});
+			},
+			pschange: function() {
+				var that = this;
+				that.getyuanqulist(that.peisong);
+			},
+			// 获取园区列表
+			getyuanqulist: function(psid) {
+				var that = this;
+				that.baseAjax("getparklist", {
+					UserID: window.userid,
+					DCID: psid
+				}, function(data) {
+					var obj = eval('(' + data + ')');
+					var datas = JSON.parse(obj.Datas);
+					var data = datas.Data;
+					// console.log(data)
+					that.yqlist = data;
+					that.yuanqu = data[0].ParkID;
+				});
+			},
+			// 获取商品的单价
+			getGoodPrice(proID, idx, val) {
+				let that = this;
+				that.baseAjax("productgetpurchaseprice", {
+					ProID: proID,
+				}, function(data) {
+					var obj = eval('(' + data + ')');
+					var datas = JSON.parse(obj.Datas);
+					var data = datas.Data;
+					var pr = data[0].Price;
+					// console.log(1136);
+					that.splbs[idx].Price = pr;
+					that.splbs[idx].SupPrice = pr * val[idx].ConvRate; // 基本数量初始值为0
+
+				});
+			},
+			//数组去重
+			unique: function(arr) {
+
+				for(var i = 0; i < arr.length; i++) {
+					for(var j = i + 1; j < arr.length;) {
+						if(arr[i].Code == arr[j].Code) { //通过id属性进行匹配；
+							arr.splice(j, 1); //去除重复的对象；
+						} else {
+							j++;
+						}
+					}
+				}
+				return arr;
+			},
+				// 合计 获取基本数量、价格、辅助数量
+			getTotal() {
+				// 基本数量
+				var basicAmount = 0;
+				// 辅助数量
+				var auxiliaryNumber = 0;
+				// 价格合计
+				var totalPrice = 0;
+
+				for(let i = 0; i < this.splbs.length; i++) {
+					basicAmount += parseInt(this.splbs[i].Num);
+					auxiliaryNumber += parseFloat(this.splbs[i].SupNum);
+					totalPrice += parseInt(this.splbs[i].Total);
+				}
+				this.getBasicAmount = basicAmount;
+				this.getAuxiliaryNumber = auxiliaryNumber.toFixed(6);
+				this.getTotalPrice = totalPrice;
+			},
+			// 设置商品
+			setProduct(val) {
+				this.spzl_Click = false;
+				val.forEach((item, index) => {
+					this.$set(item, 'Price', 0); // 基本数量初始值为0
+					this.$set(item, 'SupPrice', 0); // 基本数量初始值为0
+					this.$set(item, 'Num', 0); // 基本数量初始值为0
+					this.$set(item, 'SupNum', 0); // 基本数量初始值为0
+					this.$set(item, 'Total', 0); // 基本数量初始值为0
+					this.$set(item, 'IsFree', "0"); // 基本数量初始值为0
+					if(index == 0) { // 第一个商品总是替换
+						this.splbs.splice(this.lookShopNum, 1, item);
+					} else {
+						this.splbs.push(item); // 第二个商品开始,直接添加
+					}
+					// 设置单价
+					this.getGoodPrice(item.InterID, index, val);
+				})
+			},
+			setAddr: function(val) { // 取得地址信息
+				this.Addr = val;
+				// console.log(val);
+			},
+			addrClick: function() { // 地址点击事件
+				// console.log(this.Addr);
+				this.dz = this.Addr.Province + this.Addr.City + this.Addr.Area + this.Addr.Street + this.Addr.Detail;
+				this.dizhi_Click = false;
+			},
+			handleClick: function() {
+
+			},
+
+			// 合计 获取基本数量、价格、辅助数量
+			getTotal() {
+				// 基本数量
+				var basicAmount = 0;
+				// 辅助数量
+				var auxiliaryNumber = 0;
+				// 价格合计
+				var totalPrice = 0;
+
+				for(let i = 0; i < this.splbs.length; i++) {
+					basicAmount += parseInt(this.splbs[i].Num);
+					auxiliaryNumber += parseFloat(this.splbs[i].SupNum);
+					totalPrice += parseInt(this.splbs[i].Total);
+				}
+				this.getBasicAmount = basicAmount;
+				this.getAuxiliaryNumber = auxiliaryNumber.toFixed(6);
+				this.getTotalPrice = totalPrice;
+			},
+			//表格单击（可弹框）
+			tbclick(row, column, cell, event) {
+				var jname = column.property;
+				var $cell = $(cell);
+				var index = $cell.parent().index(); //行坐标
+				this.lookShopNum = index;
+				this.lookShopCell = cell;
+				this.enterFlag = jname;
+				console.log(row)
+				//单击表格增加颜色
+				if(jname == "Price" || jname == "Num" || jname == "SupNum" || jname == "SupPrice" || jname == "Remarks" || jname == "Code") {
+
+					$(".danjixz").removeClass("danjixz");
+
+					$(cell).addClass("danjixz");
+				}
+				if(jname == "Remarks") {
+					// console.log('回车换行')
+					// 设置回车状态为备注
+					this.enterFlag = "Remarks";
+				}
+				// 如果是编码
+				if(jname == 'Code') {
+					this.enterFlag = 'Code';
+					// csole.log("22" + $(event.target))
+					this.dbHandle(row, column, cell, event); //设置单元格input编辑
+				}
+			},
+			click: function() {
+
+			},
+			// 保存订单
+			saveOrder() {
+				this.addOrder();
+				// console.log(this.splbs);
+				// console.log(this.splbs[0]);
+			},
+			// 行删除
+			rowDelect(row, event) {
+				event.preventDefault() //阻止默认事件
+				this.sfsc_Click = true;
+				this.delIndex = $(event.target).parents('tr').index(); //获取行坐标
+			},
+			// 是否删除
+			isDelect() {
+				this.sfsc_Click = false; // 关闭弹窗
+				this.splbs.length > 1 && this.splbs.splice(this.delIndex, 1); // 删除数据
+				this.getTotal()
+			},
+			// 保存新增订单
+			addOrder(flag) {
+				// 如果用户id为空
+				var that = this;
+				if (that.jhfs == '2' && that.dz == '') {
+          that.bcsb_Click = true;
+					that.bcxx = "交货方式为派车，请选择地址";
+					return
+				} else {
+					var params = [];
+					for(let i = 0 ; i < that.splbs.length; i++) {
+						let param = {
+							ProID: that.splbs[i].InterID,
+							Unit: that.splbs[i].Unit,
+							Num: that.splbs[i].Num,
+							Price: that.splbs[i].Price,
+							SupPrice: that.splbs[i].SupPrice,
+							SupUnit: that.splbs[i].SupUnit,
+							SupNum: that.splbs[i].SupNum,
+							ConvRate: that.splbs[i].ConvRate,
+							Desc: that.splbs[i].Remarks,
+							BodyProperty1: "",
+							BodyProperty2: "",
+							BodyProperty3: "",
+							BodyProperty4: "",
+							IsFree: that.splbs[i].IsFree,
+							Batch: that.splbs[i].AutoCreateBatch,
+							Account4: "",
+							Account5: ""
+						}
+						params.push(param)
+					}
+					var jsons = {
+						Type: this.rklxs[this.rklx - 1].label,
+						StorageDate: $('#ddrq input').val(),
+						billnum: that.ddbh,
+						SalesMan: userName,
+						remarks: that.bz,
+						SupplierID: that.gysid,
+						ParID: that.hzfid,
+						Delivery: that.jhfss[this.jhfs - 1].label,
+						ArrivalTime: $('#dhsj input').val(),
+						UserID: userid,
+						UserName: userName,
+						property1: '',
+						property2: '',
+						property3: '',
+						SubmitStatus: (that.tjzt - 1),
+						DCID: that.peisong,
+						DCName: $('#pszx').eq(0).text(),
+						DeptID: 0,
+						deptname: '',
+						TransportCmpID: 0,
+						transportcmpname: '',
+						Transport: that.ysfss[this.ysfs - 1].label,
+						ParkID: that.yuanqu,
+						ParkName: $('#yqlb').eq(0).text(),
+						Province: that.Addr.Province,
+						City: that.Addr.City,
+						Area: that.Addr.Area,
+						Street: that.Addr.Street,
+						Detail: that.Addr.Detail,
+						Pro: params
+					}
+
+					$.ajax({
+						url: 'http://116.62.171.144/post/index.php',
+						type: 'POST', //GET
+						async: true, //或false,是否异步
+						data: {
+							datas: jsons,
+							method: "CPHH.PC.StorageModule.StorageOrder.Add"
+						},
+						timeout: 5000, //超时时间
+						success: function(data, textStatus, jqXHR) {
+							var obj = eval('(' + data + ')');
+							if (obj.StateCode == '100') {
+								that.bccg_Click = true;
+								that.infoHint = "保存成功"
+								var data = obj.Datas;
+								that.StorageID = data;
+								// 保存成功后  清空内容
+								that.gys = '';
+								that.dz = '';
+								that.bz = '';
+								that.ydh = '';
+								that.splbs = [];
+								that.getTotal();
+								if(flag) {
+									that.auditOrder();
+								}
+							} else {
+								that.bccg_Click = true;
+								that.infoHint = "保存失败:" + obj.Message;
+							}
+						}
+					})
+				}
+			},
+			//保存并审核
+			// 需在保存成功后,再执行审核
+			saveAndAudit() {
+				// 传入true才会执行审核
+				this.addOrder(true);
+			},
+			// 审核订单
+			auditOrder() {
+				var jsons = {
+					UserID: userid,
+					UserName: userName,
+					StorageID: this.StorageID,
+				}
+
+				$.ajax({
+					url: 'http://116.62.171.144/post/index.php',
+					type: 'POST', //GET
+					async: true, //或false,是否异步
+					data: {
+						datas: jsons,
+						method: "CPHH.PC.StorageModule.StorageOrder.Audit"
+					},
+					timeout: 5000, //超时时间
+					success: function(data, textStatus, jqXHR) {
+						// console.log('审核', data)
+						var obj = eval('(' + data + ')');
+						if (obj.StateCode == '100') {
+							that.bccg_Click = true;
+							that.infoHint = "审核成功"
+						} else {
+							that.bccg_Click = true;
+							that.infoHint = "审核失败:" + obj.Message;
+						}
+					}
+				})
+			},
+			// 反审核订单
+			antiOrder() {
+				var jsons = {
+					UserID: userid,
+					UserName: userName,
+					StorageID: this.StorageID,
+				}
+				$.ajax({
+					url: 'http://116.62.171.144/post/index.php',
+					type: 'POST', //GET
+					async: true, //或false,是否异步
+					data: {
+						datas: jsons,
+						method: "CPHH.PC.StorageModule.StorageOrder.Anti"
+					},
+					timeout: 5000, //超时时间
+					success: function(data, textStatus, jqXHR) {
+						// console.log('反审核', data)
+					}
+				})
+			},
+			// 处理X关闭 
+			handleclose() {
+
+			}
+		}
+
+	}
+</script>
+<style>
+	.hzftc .el-table__body tr.current-row>td {
+		background: #CDECFE;
+	}
+	
+	.el-table--enable-row-transition .el-table__body td {
+		background: #f7e5e5
+	}
+	
+	.el-table--enable-row-transition .el-table__body td.bianji {
+		background: #fff
+	}
+	
+	.el-table--enable-row-transition .el-table__body td.danjixz {
+		background: #d9def3;
+	}
+	.rkgl .dizhi .el-dialog--tiny {
+    width: 30%;
+	}
+	.rkgl .bccg .el-dialog--tiny{
+    width: 10%;
+	}
+	.rkgl .el-dialog--tiny{
+		width: 20%;
+		min-width: 300px;
+	}
+</style>
+<style rel="stylesheet/stylus" scoped>
+	/*@import url("../../common/css/rkgl/rkgl_vue.css");*/
+	/*@import url("../../common/css/rkgl/rkgl_vue.css") print;*/
+	/**上面是引用的css。下面是直接写的css*/
+	
+	.blue {
+		height: 36px;
+		width: 100%;
+		background: #cdecfe;
+		position: relative;
+		margin-bottom: 10px;
+		border: 1px solid #eee;
+	}
+	
+	.rkgl {
+		width: 100%;
+		height: 100%;
+		padding-left: 5px;
+	}
+	
+	.rkgl .el-table--fit {
+		height: 400px !important;
+	}
+	
+	.blue .fl {
+		position: absolute;
+		left: 20px;
+		top: 3px;
+		width: 40px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		background: #00c4ff;
+		color: white;
+		
+	}
+	
+	.el-table-column {
+		height: 50px;
+	}
+	
+	.rkgl .form-2 {
+		width: 100%;
+		height: 40px;
+		padding-left: 30px;
+	}
+	
+	.center {
+		margin: 0 auto;
+	}
+	
+	.fr {
+		float: right;
+	}
+	
+	.el-row {
+		margin-bottom: 2px;
+		margin-left: px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	.el-row p {
+		font-size: 16px;
+		line-height: 25px;
+		margin-left: 20px;
+	}
+	
+	.el-col {
+		border-radius: 4px;
+	}
+	
+	. -dark {
+		background: #99a9bf;
+	}
+	
+	. {
+		background: #d3dce6;
+	}
+	
+	. -light {
+		background: #e5e9f2;
+	}
+	
+	.grid-content {
+		border-radius: 4px;
+		min-height: 36px;
+	}
+	
+	.row-bg {
+		padding: 10px 0;
+		background-color: #f9fafc;
+	}
+	
+	.rkgl .form-2 {
+		padding-left: 20px;
+	}
+	
+	.el-dialog {
+		width: auto;
+		height: auto;
+	}
+	
+	.input_width {
+		width: 100%;
+		margin-top: 2px;
+	}
+	
+	h1.center {
+		color: #000;
+		font-size: 30px;
+		font-weight: 900;
+		font-family: "微软雅黑";
+		text-align: center;
+	}
+	
+</style>

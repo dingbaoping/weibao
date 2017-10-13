@@ -1,0 +1,21 @@
+.ddsp .el-table tr{
+	height: 40px;
+}
+.ddsp .el-table th{
+	border:1px solid #6BC8FE;
+	background: #cdecfd!important;
+
+}
+.ddsp .el-table th>.cell {
+	background: #cdecfd;
+	text-align: center;
+	height: 100%;
+}
+.ddsp .el-table td{
+	border:1px solid #6BC8FE;
+	background: #F8F8F8;
+}
+
+.ddsp .el-table__header-wrapper {
+	height: 40px;
+}

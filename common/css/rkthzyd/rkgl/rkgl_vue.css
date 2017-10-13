@@ -1,0 +1,272 @@
+.rkgl .el-breadcrumb{
+	height: 40px;
+  width:100%;
+	background:url('../../img/rk/caozuomoren.png') ;
+
+}
+
+.rkgl{
+
+	/*min-height: 700px;*/
+	position: relative;
+	/*overflow: auto;*/
+}
+.rkgl .select_box{
+
+	overflow: auto;
+
+}
+
+.rkgl .page2{
+	min-width: 1200px;
+	/*min-height: 700px;*/
+	position: relative;
+	/*overflow: auto;*/
+}
+.rkgl .el-breadcrumb .el-button{
+	width: 80px;
+	height: 40px;
+	color:#000;
+	position: relative;
+	font-size:12px;
+}
+.rkgl h1{
+	font-size:30px;
+	color:#000;
+	font-family: "微软雅黑";
+	font-weight: 900;
+	height: 55px;
+}
+.rkgl .el-breadcrumb .el-button:hover{
+	background: url('../../img/rk/caozuoxuanfu.png');
+}
+.rkgl .el-breadcrumb .el-button i{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:8px;
+}
+.rkgl .el-breadcrumb .ico1{
+	background: url('../../img/rk/baocun.png');
+	left:0;
+
+}
+.rkgl .el-breadcrumb .ico2{
+	background: url('../../img/rk/baocunshenhe.png');
+	left:0;
+
+}
+.rkgl .el-breadcrumb .ico3{
+	background: url('../../img/rk/shangyitiao.png');
+	left:0;
+
+}
+.rkgl .el-breadcrumb .ico4{
+	background: url('../../img/rk/xiayitiao.png');
+	right:0;
+
+}
+.rkgl .el-breadcrumb .ico5{
+	background: url('../../img/rk/danjushezhi.png');
+	left:0;
+
+}
+.rkgl .el-breadcrumb .ico6{
+	background: url('../../img/rk/dayin.png');
+	left:0;
+
+}
+.rkgl .el-breadcrumb .ico7{
+	background: url('../../img/rk/yulan.png');
+	left:0;
+
+}
+.rkgl .el-breadcrumb .ico8{
+	background: url('../../img/rk/caozuo.png');
+	left:0;
+
+}
+.rkgl .el-breadcrumb .ico9{
+	background: url('../../img/rk/shenhe.png');
+	left:0;
+
+}
+.rkgl .el-breadcrumb .ico10{
+	background: url('../../img/rk/fanshen.png');
+	left:0;
+
+}
+.rkgl .el-breadcrumb .ico11{
+	background: url('../../img/rk/tuichu.png');
+	left:0;
+
+}
+.rkgl h1{
+	font-family: "微软雅黑";
+}
+.rkgl .el-row{
+	height: 40px;
+	font-size: 16px;
+	margin-bottom: 2px;
+}
+.rkgl .el-col{
+	height: 40px;
+}
+
+
+.rkgl .el-row .blueborder{
+	border:#36b4fd 1px;
+
+}
+.rkgl .el-row .el-input{
+	margin-top: 6px;
+}
+.rkgl .el-input__icon{
+	background-color: #6BC8FE;
+	color:#fff;
+
+}
+ .rkgl .el-input__icon::before{
+	color:#fff;
+}
+.rkgl   form .el-row .el-input{
+	width: 170px;
+	height: 25px;
+
+}
+.rkgl .el-input input{
+	border:1px solid #6BC8FE;
+	height: 25px;
+	border-radius: 0;
+}
+.rkgl .grid-content{
+	padding:0 5px 0 5px;
+}
+.rkgl .grid-content .my{
+  width: 570px!important;
+  right:265px;
+}
+.rkgl .el-table{
+	border:1px solid #6BC8FE;
+
+}
+.rkgl .spbg {
+	min-height: 306px;
+	 
+}
+.rkgl .spbg .el-table__body-wrapper{
+	min-height: 260px;
+}
+.rkgl .el-table th{
+	border:1px solid #6BC8FE;
+	background: #cdecfd;
+}
+.rkgl .el-table th>.cell {
+	background: #cdecfd;
+}
+.rkgl .el-table td{
+	border:1px solid #6BC8FE;
+	background: #F8F8F8;
+}
+.rkgl .el-input__icon{
+	height: 25px;width: 25px;
+}
+.rkgl form .el-form-item .el-form-item__content .el-input__icon{
+	top:18px
+}
+.rkgl .el-select span{
+	color:#5EC0FD;
+}
+.rkgl .el-dialog{
+	width: auto;
+	height: auto;
+
+}
+.rkgl .el-dialog .dialog__body{
+	padding:0;
+
+}
+.rkgl .el-dialog .dialog-header{
+	height: 50px;
+	background: #36B4FE;
+	padding: 0;
+	
+}
+.rkgl .form-2{
+	height: 30px;
+}
+.rkgl .demo-form-inline{
+
+	height: 0px;
+}
+.blue button{
+	float:left;
+}
+.rkgl .el-dialog nav{
+	height: 40px;
+	width: 100%;
+	max-width: 1600px;
+	background:url('../../img/rk/caozuomoren.png') ;
+}
+.rkgl nav button{
+	width: auto;
+	height: 40px;
+	color:#000;
+	position: relative;
+	font-size:12px;
+	border:none;
+	background: transparent;
+	padding-left: 25px;
+
+}
+.rkgl nav button:hover{
+	background: url('../../img/rk/caozuoxuanfu.png');
+}
+.rkgl nav i{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:8px;
+}
+.rkgl nav .ico12{
+	left:0;
+	background: url(../../img/rk/dayin.png);
+}
+.rkgl nav .ico13{
+	left:0;
+	background: url(../../img/rk/tuichu.png);
+	background-size:20px 20px;
+}
+.rkgl .input_width{
+	width: 50%!important;
+}
+.rkgl .button_w{
+  width:100%!important;
+}
+.rkgl .grid-content p{
+	display: inline-block;
+	width: 43%;
+	line-height: 40px;
+	margin:0;
+	margin-left:15px;
+	color:#36b4fd;
+}
+.rkgl .input_width  .el-input{
+	width:100%!important;}
+
+
+@media screen and (max-width: 1800px and min-width: 1200px) {
+ .rkgl .grid-content p{
+		font-size: 12px!important;
+		background: red!important;
+	};
+.rkgl .input_width{
+	width: 50%!important;
+
+}
+
+}
+/*独立设置地址与备注的宽度*/
+.rkgl .page2 .select_box .duliw{
+  width:20%;
+}

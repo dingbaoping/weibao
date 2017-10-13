@@ -1,0 +1,196 @@
+/* 合作方input样式 */
+.hzf-input{
+  margin-top: 0.4rem;
+}
+ /* 搜索的图标 */
+.curbox .el-icon-search,.curbox .el-icon-delete{
+	font-size: 1.26rem;
+	position: absolute;
+	left: 6px;
+	top: 10px;
+}
+
+/* 添加全局导航栏样式 */
+.but-box {
+	width: 100%;
+	height: 40px;
+  background: url(../../assets/img/gun.png) repeat-x;
+}
+.but-box ul li {
+	display: table;
+	float: left;
+}
+.curbox {
+	display: table;
+	margin: 0 auto;
+	padding-left: 30px;
+	/* background: url(../../../common/img/rk/daochu.jpg) no-repeat; */
+	background-position: 5px 10px;
+	cursor: pointer;
+  position: relative
+}
+div.boxtab {
+	float: left;
+	display: table;
+	height: 40px;
+	margin: 0 5px;
+	line-height: 40px;
+}
+div.boxtab:hover {
+	background: #efeeee;
+}
+.gun {
+	height: 20px;
+	width: 1px;
+	background: #b7b7b7;
+	display: block;
+	float: right;
+	margin-top: 10px;
+}
+.bc{background: url(/static/img/baocun.f5ce79f.png) no-repeat}
+.bcsh{background: url(/static/img/baocunshenhe.8686719.png) no-repeat;}
+.syt{background: url(/static/img/shangyitiao.c7a4ef0.png) no-repeat;}
+.xyt{background: url(/static/img/xiayitiao.094a950.png) no-repeat;}
+.djsz{background: url(/static/img/danjushezhi.98b4764.png) no-repeat;}
+.dy{background: url(/static/img/dayin.90cb2b6.png) no-repeat;}
+.yl{background: url(/static/img/yulan.f5229eb.png) no-repeat;}
+.cz{background: url(../../../common/img/rk/caozuo.png) no-repeat;}
+.sh{background: url(/static/img/shenhe.07d3de4.png) no-repeat;}
+.fs{background: url(/static/img/fanshen.fc97c42.png) no-repeat;}
+.tc{background: url(/static/img/tuichu.5a5b35c.png) no-repeat;}
+.plsh{background: url(/static/img/baocunshenhe.8686719.png) no-repeat;}
+.bz{background: url(/static/img/beizhu.a0b7ff3.png) no-repeat;}
+.ctys{background: url(/static/img/chuangti.22d90ef.png) no-repeat;}
+.xz{background: url(/static/img/baocunshenhe.8686719.png) no-repeat;}
+.ck{background: url(/static/img/ss.4132060.png) no-repeat;}
+.sc{background: url(/static/img/sc.96a866b.png) no-repeat;}
+
+.dc{background: url(../../../common/img/rk/drdc.png) no-repeat;}
+.scdj{background: url(../../../common/img/rk/scdj.jpg) no-repeat;}
+.fscdj{background: url(../../../common/img/rk/fscdj.jpg) no-repeat;}
+.shzy{background: url(../../../common/img/rk/shzy.jpg) no-repeat;}
+.shys{background: url(../../../common/img/rk/shys.jpg) no-repeat;}
+.sjzy{background: url(../../../common/img/rk/sjzy.jpg) no-repeat;}
+.sjzyd{background: url(../../../common/img/rk/sjzyd.jpg) no-repeat;}
+.sx{background: url(../../../common/img/rk/shuaxin.jpg) no-repeat;}
+.jhzy{background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACo0lEQVRYR8WWQXISQRSG3+uBlJJFwlJgkZxAcgLxBJCdFagwnMB4A28gN5ghBSl3jidQTiCeQKxCsgwu0CqFftYbaOy0MNNNEpkdVXT/X/f/3t8PYccf7lgfdg9wFozKQmBVAgz2ZK4ftvKT/3krWL8cXyDRGyVKBAMAGADSx7n0+m9bT4YPCRRb0AjGNRBUBqAKAD7TYIY9v3j84ACmwMIWaDOMlHRy1SrxrVh9fnBz6GLjxiI8uxz5gjAgxFe980I7SZ1Ff4tpFQlrgFADiafdViGyId4IwJvOxI8bromeXzwxN/tHVPsDAXZ6zYJ/JwBeXO98ixCgOpPimIsxSfSWGNGk65fydwYwbah3xiECNW02trUhMYhMG5bd8s4GwNaG1CRsdEYDAHyqbKiHowkiHiRBEMBXBAi7zeLrNNhUABVUqhs22UBE3wFFhBKipA54EVwfZYDK6j+pAPECIb+obtBtcBIVVCUiHxHKfCsZmctzXqQCxElp2sDFmHJS1TFAeKFEdTskUuvqvBRaASgb1KJNvlq3KQAQwPtes1izAljZsFykA7iImuBsgxWAboPyLs4IidU4erf9JJ5aA5g2qJTcRnvRphTNpNe2BjBtUClpC6BEpYRQf12tAUwb+Dc/VumBRJEpqq9xBeAZ4aXqhnU2cDYgQrhOdHGLf/OAZw0ngJUNyxlh9VglpKApqk7PbZiVOd8JgBdz2/2C6ZHneQfe/NHnGfysmNGbJEpI0d58P1JTkzOA/hZwPGcp95w3cxHdugaWI/wnfYPVI6W9kny95kk3FavTDTSC6woI+eEWwDIduR4QxGF2/ji8l6F0HXEcuzgd6vOAzdCa1KpON8AbxSeV0F5AUD8j92suJzZhnAHUBq7z/73UgG3suvzvD6tJ12iMBo7XAAAAAElFTkSuQmCC) no-repeat;}
+.fpry{background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQECAQEBAQEBAgICAgICAgICAgICAgICAgICAgICAgICAgICAgL/2wBDAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgL/wAARCAAUABkDAREAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAACAYHCQr/xAArEAABBAIABQMCBwAAAAAAAAADAgQFBgEHABESExQIImEVFiRRgZGhsfD/xAAYAQEAAwEAAAAAAAAAAAAAAAAHAAYIBf/EACsRAAICAQMDBAEDBQAAAAAAAAIDAQQFBhESABMUISIj8DEHFRZRUlOh0f/aAAwDAQACEQMRAD8A7z/K+c/79eJ9+/f99Tb79++k9CNcnOXWI3Psia3ladby+tbbe4aLg4mSi46oa9jKS6KKvuLlW3oFplvqzcYpVwp+tSTs34gRuWuEjNnQYooYC7gMVX07UyqctSxr22XJcy9k23wGbI0bS2DNLwmmdNQ1oiVPrkduGkRBBbLLOTrZO63LPpNpWbSgWs1BXpBVkoVNlBBMWPIARss7szzW6BR24iJ6VWu7RLWmgUizT0dmFm7DUq9OTER0GH9Mk5SIC+fsO2bPWntFWpPST346eS/djPIZ1RjKmH1LkKlZvkV6163XS/8APdUl5rWzePSeQDE7x7Z/I7xtPSBhrVi/iKr2r7TX10tYr/GbFgRD6+vtmSjYtp/r69TLyvnP88cLrpdGze+zvsOrR6GVwrFLnLHPwcS1mbI5jMpiYMssBFrsbOLkiiQ7VHsVlPyXnsoXkWTdSeQyIn6a6U/k+ZbJ0LmQr1Ktl516Yt+ayKWTRqsclZkmLVgQXyj5CHnAbFHIatq7Nfs+PCBtV6rXvUuGPII7au4MWXis5AWdlUyX9kTxko29JKGxdexj7cmrnFn3lRZSelWjxwSXnqDpZU2vCxBTQTIAdn+Kwdz3UxhDJIlJU58L354atK6qtI0HmPD03kkVkGsIRWyeoPH/ACc5MZIX7JlSeM2xHgXAo78QH5PM1hUt1Nj5sZeoxrBIpY2li5b+B8OY+Ke5BHJQkpifdHx+vp0jNdbFlY/adp1badr1TYK28PFSEI5yitQNwaWLBnf3LUXsLBKSI/itRsn2FJAJyJLoiTJWhHWkr1Vpqna0ZSzVLB3cZBvet4b2rNFlXijxLy7FkSNffeVitMSw1sJISEiRSJXbC5eyjUFjH2MhXu8VrNUzCU2of8vfrkpRQJ8FCp0TwFgQZQUTEQUJLzPnP744Jerxyn7v/wB6AfqJvkrq7bNctMIyh5R/Oac2LFOm9haFfsQtqu+ZzzXwxtygWjLgrpaHuO5lDgQwJyjCgoXjRX6Tadqa00Rdp2GPSurqDEuAqhwthFdVYrn3CMGiXZBMFWnjBKMmTBTDCiSfXGWfp7UaLCgUw24y8soeHMIGvIOHjAyExzI9m+uxiIRtHCJ6KZbdI0aqz2sItrFvIPYNA9NrmYkJdlh5ONM3uMZ1F8CJdIUMIxMm7dBYoZG5ksHOVEFjo6RpcV4KrqTN18y5jws4vJavFCkM7dZn7Y199ZPCYIyOw1pBdMGrKymBEpgtzk5Zkm4jGuoLBZKu08DLTYPJw+atdY4WW8CIpBcFWEgIUs3mIkfbFqVK3yLvZdQ0wRvHYrlY9UOx3TGZS3Jm2OD13EtdGxn8sRakLIdwZTd4VLdBXLLmBa+ZDEJSM7g6qNIZDUMG2bdzReKFleTjwRG14OOMVogYKAWpQuQsmktVn5RHYQALDjcg1mer4uRX2a2ob0g3jPklKJfaEjbvtJGRyDCgBI1eyZ9SmdNe6r8/74x31oDhHX//2Q==) no-repeat;}
+.xg{background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACzElEQVRYR8VXTVIaURD++hkwu0CNe80JoicIniDcIFIVZnClOUHkBCErfiZV6gk0JxBPEDxBcO8UZBexfJ3qkTc+cGCGAcpZAfOY7+vur7u/IbzyRa+Mj7UTcNvBMRhHTCgQ0Oh4Tt0Oeq0Eqq2gQYQjBm4FlIBtZpz5NadiSKyNQLV5d0CKTsG4GW2qkgDm73UXhA8A6h3PORmTmlTBwemg8OYeHxXp3TT6UFqdtw6LffusAWfwte9theByybPzI91ngH3PKb4gIH+Eou8EFNKAj8987XhOw5yffgZrrviHW2eGQG6k/wD463vOzgSBL81BSSl9JTcBNLRW3SQStIGh7xZ7NniY9qfrHMBn+SAkHt5uXOZG+ooAyWxEOtJAtXV3SUSftFb7Pw+LieDT5KKajwEl6onfgJ6AM+OHX3OOX4jQbQU9aRWTmqTo42puojUpl+9uOxCxfYu7N1ECtx3wtGjSkIiLPCpJZ7ALDtNOrPnYJvYyAxkIpAYnVbK1YgcWaWDRDMxLbfU58kKSpjIRcNuBtFWkcDu1NrjdgrPKuTCBRcFl+OTuHy+YN+px3bUQgbngZvRabShRW/MlGr+ZNJAFfGUE0oLbS8ZEuXQGzEqNGyR2G8ro7XjOwbTYliIw3l6D8KGM/mhT7Z1VikP5mgZ86RK47bsyQBcmKgZ6D3m1n/v3WLaXTlzkKymBVfs6GOXQTDD6IISrdFba7TIsVYJqO+iLjVJavdfqcXciG8y//NpWOWlfZCYgE41Y/2ZgSIyhFXXoF4ylWhsBi/kTBuOGmRtiLIwQk8BXIMJwlw+VVpfTvi8N+GIEngzJtjGLaQGSzplOmrWY7F0Qbrhp354EMO++WUREVGJSe3GeICJQaw52tNJiMN+J8MAcmc2sJAi0I+Kd57QmXkzGJE4YKEn7ZQV+Hlx8TaDuKK8as4S7tjejtORfncB/yu5eP0dgDZQAAAAASUVORK5CYII=) no-repeat;}
+.jy{background: url(../../../common/img/rk/jy.jpg) no-repeat;}
+.fjy{background: url(../../../common/img/rk/fjy.jpg) no-repeat;}
+.plxg{background: url(../../../common/img/rk/plxg.jpg) no-repeat;}
+.spflm{background: url(../../../common/img/rk/spflm.png) no-repeat;}
+.czypd{background: url(../../../src/assets/img/lihuojihua.png) no-repeat;}
+/*保存,保存审核,上一条,下一条,单据设置,打印,预览,操作,审核,反审,退出,
+批量审核,备注,窗体样式,
+新增,查看,删除,导出,审核,反审,生成单据,反生成单据,收货作业,收货验收,上架作业,上架指引单
+拣货作业,分配人员,修改,刷新
+禁用,反禁用,批量修改,商品分类码
+*/
+.bc,.bcsh,.syt,.xyt,.djsz,.dy,.yl,.cz,.sh,.fs,.tc,
+.plsh,.bz,.ctys,
+.xz,.ck,.sc,.dc,.scdj,.fscdj,.shzy,.shys,.sjzy,.sjzyd,
+.jhzy,.fpry,.xg,.sx,.jy,.fjy,.plxg,.spflm, .czypd
+{
+	background-position: 5px 10px; 
+	background-size: 20px 20px;
+}
+/* 添加全局导航栏样式结束 */
+
+/* 保存成功 */
+.bccg .el-dialog--tiny {
+	width:15%;
+	padding-bottom: 1rem;
+	top: 38% !important;
+}
+.bccg .el-dialog--tiny p {
+	font-size: 1.2rem;
+	color: #47f001;
+	line-height: 58px;
+}
+/* 保存失败 */
+#app .ckd .bcsb div.el-dialog--tiny {
+	width:15%;
+	padding-bottom: 1rem;
+	top: 38% !important;
+}
+.bcsb .el-dialog--tiny p {
+	font-size: 1.2rem;
+	color: red;
+	padding: 0 10px;
+	line-height: 76px;
+}
+/* 是否删除弹窗 */
+#app .sfsc div.el-dialog--tiny {
+	width: 15%;
+	top: 30% !important;
+	text-align: center;
+	padding-bottom: 1rem;
+}
+.sfsc .el-dialog--tiny .el-button--primary{
+	margin-right: 2rem;
+}
+.sfsc .el-dialog--tiny p {
+	font-size: 1.2rem;
+	color: #000;
+	line-height: 58px;
+}
+.rkddlb .sfsc .el-dialog--tiny .el-button--primary {
+	margin-right: 0px;
+}
+/* 备注设置成功 */
+#szcg {
+	text-align: center;
+}
+#szcg .el-dialog--tiny {
+	width: 15%;
+	padding-bottom: 1rem;
+}
+#szcg .dialog-footer p  {
+	font-size: 1.2rem;
+	line-height: 58px;
+}
+
+.hzftc .el-dialog--tiny,
+.ckd .el-dialog--tiny,
+.ckddxg div.el-dialog--tiny ,
+{
+	width: 50%; 
+}
+
+
+/* 编辑部分显示颜色 */
+	.hzftc .el-table__body tr.current-row>td {
+		background: #CDECFE;
+	}
+	 .el-table--enable-row-transition .el-table__body td {
+		background: #f7e5e5
+	}
+	
+	.el-table--enable-row-transition .el-table__body td.bianji {
+		background: #fff
+	}
+	
+	.spbg .el-table--enable-row-transition .el-table__body td.danjixz {
+		background: #d9def3;
+	}
+
+ /* 出库订单是否删除弹窗 */
+ #app .ckdd .sfsc .el-dialog--tiny {
+	width: 15%;
+	text-align: center;
+	padding-bottom: 1rem;
+	height: auto;
+}
+#app .ckdd .sfsc .el-dialog--tiny .el-button--primary{
+	margin-right: 2rem;
+}
+#app .ckdd .sfsc .el-dialog--tiny p {
+	font-size: 1.2rem;
+	color: #000;
+	line-height: 58px;
+}
+#zxd .el-input {
+	width: 88%;
+	
+}

@@ -1,0 +1,110 @@
+.el-breadcrumb{
+	height: 40px;
+	width: 100%;
+	background:url('../img/caozuomoren.png') ;
+	
+}
+
+
+.el-breadcrumb .el-button{
+	width: 96px;
+	height: 40px;
+	color:#000;
+	position: relative;
+	font-size:12px;
+}
+
+.el-breadcrumb .el-button:hover{
+	background: url('../img/rk/caozuoxuanfu.png');
+}
+.el-breadcrumb .el-button i{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:8px;
+}
+.el-breadcrumb .ico1{
+	background: url('../img/rk/baocun.png');
+	left:0;  
+	
+}
+.el-breadcrumb .ico2{
+	background: url('../img/rk/baocunshenhe.png');
+	left:0;  
+	
+}
+.el-breadcrumb .ico3{
+	background: url('../img/rk/shangyitiao.png');
+	left:0;  
+	
+}
+.el-breadcrumb .ico4{
+	background: url('../img/rk/xiayitiao.png');
+	right:0;  
+	
+}
+.el-breadcrumb .ico5{
+	background: url('../img/rk/danjushezhi.png');
+	left:0;  
+	
+}
+.el-breadcrumb .ico6{
+	background: url('../img/rk/dayin.png');
+	left:0;  
+	
+}
+.el-breadcrumb .ico7{
+	background: url('../img/rk/yulan.png');
+	left:0;  
+	
+}
+.el-breadcrumb .ico8{
+	background: url('../img/rk/caozuo.png');
+	left:0;  
+	
+}
+.el-breadcrumb .ico9{
+	background: url('../img/rk/shenhe.png');
+	left:0;  
+	
+}
+.el-breadcrumb .ico10{
+	background: url('../img/rk/fanshen.png');
+	left:0;  
+	
+}
+.el-breadcrumb .ico11{
+	background: url('../img/rk/tuichu.png');
+	left:0;  
+	
+}
+h1{
+	font-family: "微软雅黑";
+}
+.el-row{
+	height: 40px;
+}
+.el-col{
+	height: 40px;
+}
+.el-row p{
+	line-height: 40px;
+	margin:0;
+	margin-left:15px;
+	color:#36b4fd;
+}
+
+.el-row .blueborder{
+	border:#36b4fd 1px;
+	
+}
+.el-input__icon{
+	background-color: #cdecfd;
+	color:#fff;
+}
+.el-input__icon::before{
+	color:#fff;
+}
+.el-input{
+	width: 200px;
+}

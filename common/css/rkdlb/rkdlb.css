@@ -1,0 +1,204 @@
+.rkdlb .el-breadcrumb{
+	height: 40px;
+	width: 100%;
+	background:url('../../img/rk/caozuomoren.png') ;
+
+}
+.rkdlb .el-breadcrumb .el-button{
+	width: auto;
+	padding-left:30px;
+	height: 40px;
+	color:#000;
+	position: relative;
+	font-size:12px;
+	text-align: right;
+}
+.rkdlb .el-breadcrumb .el-button:hover{
+	background: url('../../img/rk/caozuoxuanfu.png');
+}
+.rkdlb .el-breadcrumb .el-button i{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:8px;
+}
+.rkdlb .el-breadcrumb .ico1{
+	background: url('../../img/rk/shenhe.png');
+	left:10px;
+
+}
+.rkdlb .el-breadcrumb .ico2{
+	background: url('../../img/rk/baocunshenhe.png');
+	left:0px;
+}
+.rkdlb .el-breadcrumb .ico3{
+	background: url('../../img/rk/beizhu.png');
+	left:-1px
+}
+.rkdlb .el-breadcrumb .ico4{
+	background: url('../../img/rk/chuangti.png');
+	left:-1px
+}
+.rkdlb .el-breadcrumb .ico5{
+	background: url('../../img/rk/tuichu.png');
+	left:-1px
+}
+.rkdlb .fl{
+	float: left;
+}
+.rkdlb .fr{
+	float: right;
+}
+.rkdlb .el-input{
+	height: 25px;
+	float: right;
+}
+.rkdlb .el-input input{
+	border:1px solid #6BC8FE;
+	height: 25px;
+	border-radius: 0;
+}
+.rkdlb .el-input__icon{
+	background-color: #6BC8FE;
+	color:#fff;
+
+}
+.rkdlb .el-input__icon::before{
+	color:#fff;
+}
+.rkdlb .form1{
+	margin-top: 15px;
+}
+.rkdlb .el-col span{
+	line-height: 25px;
+}
+.rkdlb .zdrq{
+	width: 100%;
+}
+.rkdlb .rq2{
+	margin-left: 12px;
+}
+.rkdlb .shbz{
+	
+	margin-left: 10px;
+
+}
+.rkdlb .hzf{
+	
+}
+.rkdlb .grid-content{
+	position: relative;
+}
+.rkdlb .grid-content .el-button{
+	width: 100px; height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 0;
+	background: url('../../img/rk/yeqianmoren.png');
+	border:none;
+	color:#000;
+}
+.rkdlb .grid-content .cx{
+	
+}
+.rkdlb .grid-content .cx::before{
+	width: 20px;height: 20px;
+	content:url(../../img/rk/cx.png);
+	position:absolute;
+	left:10px; top:5px;
+}
+.rkdlb .grid-content .close{
+	left:140px;
+}
+.rkdlb .grid-content .close::before{
+	width: 20px;height: 20px;
+	content:url(../../img/rk/gb.png) ;
+		position:absolute;
+		left:10px; top:5px;
+}
+.rkdlb .grid-content .el-button span{
+	position: absolute;
+	left:40px; top:0;
+	width: 60px;
+	font-size:16px;
+	text-align: justify;
+	display: inline-block;
+
+}
+.rkdlb .el-table{
+	border:1px solid #6BC8FE;
+
+}
+.rkdlb .el-table tr{
+	height: 40px;
+}
+.rkdlb .el-table th{
+	border:1px solid #6BC8FE;
+	background: #cdecfd;
+
+}
+.rkdlb .el-table th>.cell {
+	background: #cdecfd;
+	text-align: center;
+	height: 100%;
+}
+.rkdlb .el-table td{
+	border:1px solid #6BC8FE;
+	background: #F8F8F8;
+}
+
+.rkdlb .el-table__header-wrapper {
+	height: 40px;
+}
+.rkdlb .el-form{
+	margin-left: 15px;
+}
+
+.rkdlb .yqbj{
+	position: relative;
+	
+}
+.rkdlb .yq {
+  float: left;
+  
+  margin-left:10px;
+}
+.rkdlb .djbj{
+	position: relative;
+	
+}
+
+.rkdlb .tongji{
+	height: 40px;
+	background: #CDECFD;
+	border:solid #36B5FC 1px;
+	position: relative;
+}
+.rkdlb .el-tag{
+	width: 155px;
+	height: 28px;
+	background: url('../../img/rk/yeqiandiji.png');
+	color:#000;
+	text-align: center;
+}
+.rkdlb .tag1{
+	position: absolute;
+	left:440px; top:5px;
+}
+.rkdlb .tag2{
+	position: absolute;
+	right:440px; top:5px;
+}
+.rkdlb .el-form span{
+	color:#5EC0FD;
+}
+.rkdlb .el-form .el-button span{
+	color:#000;
+}
+
+.rkdlb .second_row{
+	margin-bottom: 10px;
+}
+.rkdlb .input_width{
+	width: 100%;
+}

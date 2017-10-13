@@ -1,0 +1,119 @@
+.ckddzhbb .el-row{
+	margin: 5px 10px 5px 10px;
+	padding-left: 10px; padding-right: 10px;
+}
+.ckddzhbb .el-form .el-col .el-button{
+	margin-left:10px;
+	
+	
+	
+}
+
+.ckddzhbb	.datatable {
+		width: 100%;
+	}
+	
+.ckddzhbb	 {
+		width: 100%;
+		height: 100%;
+		color:#000000;
+	}
+	
+.ckddzhbb	.buttondiv {
+		margin-top: 12px;
+		margin-left: 20px;
+		display: table;
+		float: left;
+	}
+	
+.ckddzhbb	.formcx {
+		width: 600px;
+		height: 100%;
+		float: left;
+		display:table;
+	}
+	
+.ckddzhbb	.but-box {
+		width: 100%;
+		height: 40px;
+		background: url(../../../src/assets/img/gun.png) repeat-x;
+	}
+	
+.ckddzhbb	div.boxtab {
+		float: left;
+		display: table;
+		height: 40px;
+		margin: 0 5px;
+		line-height: 40px;
+	}
+	
+.ckddzhbb	div.boxtab:hover {
+		background: #efeeee;
+	}
+	
+.ckddzhbb	div.but-box ul li {
+		display: table;
+		float: left;
+	}
+	
+.ckddzhbb	.curbox {
+		display: table;
+		margin: 0 auto;
+		padding-left: 30px;
+		background: url(../../img/rk/daochu.jpg) no-repeat;
+		background-position: 5px 10px;
+		cursor: pointer;
+	}
+	
+.ckddzhbb	.gun {
+		height: 20px;
+		width: 1px;
+		background: #b7b7b7;
+		display: block;
+		float: right;
+		margin-top: 10px;
+	}
+	
+.ckddzhbb	.ctys {
+		background: url(../..//img/rk/chuangti.png) no-repeat;
+		background-position: 5px 10px;
+	}
+	
+.ckddzhbb	.tc {
+		background: url(../../img/rk/tuichu.png) no-repeat;
+		background-position: 5px 10px;
+	}
+	
+.ckddzhbb	.chaxunkuang {
+		width: 100%;
+		height: 60px;
+		border: 1px solid #999;
+		border-left: 0;
+		border-right: 0;
+	}
+.ckddzhbb .table_left{
+	width: 17%;
+  float:left;
+	min-height: 510px; 
+	margin-right:10px ;
+	border:1px solid #ccc;
+}
+.ckddzhbb .table_right{
+	width: 81%;
+	float: right;
+	height: 510px;
+	min-height: 510px; 
+	border:1px solid #ccc;
+}
+.ckddzhbb #table_dj{
+	width: 100%;
+}
+.ckddzhbb .tongji{
+	margin-top: 5px;
+	margin-bottom: 20px;
+	text-align: center;
+	
+}
+.ckddzhbb .tongji .el-tag{
+	background: #000;
+}

@@ -1,0 +1,205 @@
+.ckddlb .el-breadcrumb{
+	height: 40px;
+	width: 100%;
+	background:url('../../img/rk/caozuomoren.png') ;
+
+}
+.ckddlb .el-breadcrumb .el-button{
+	width: auto;
+	padding-left:30px;
+	height: 40px;
+	color:#000;
+	position: relative;
+	font-size:12px;
+	text-align: right;
+}
+.ckddlb .el-breadcrumb .el-button:hover{
+	background: url('../../img/rk/caozuoxuanfu.png');
+}
+.ckddlb .el-breadcrumb .el-button i{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:8px;
+}
+.ckddlb .el-breadcrumb .ico1{
+	background: url('../../img/rk/shenhe.png');
+	left:10px;
+
+}
+.ckddlb .el-breadcrumb .ico2{
+	background: url('../../img/rk/baocunshenhe.png');
+	left:0px;
+}
+.ckddlb .el-breadcrumb .ico3{
+	background: url('../../img/rk/beizhu.png');
+	left:-1px
+}
+.ckddlb .el-breadcrumb .ico4{
+	background: url('../../img/rk/chuangti.png');
+	left:-1px
+}
+.ckddlb .el-breadcrumb .ico5{
+	background: url('../../img/rk/tuichu.png');
+	left:-1px
+}
+.ckddlb .fl{
+	float: left;
+}
+.ckddlb .fr{
+	float: right;
+}
+.ckddlb .el-input{
+	height: 25px;
+
+}
+.ckddlb .el-input input{
+	border:1px solid #6BC8FE;
+	height: 25px;
+	border-radius: 0;
+}
+.ckddlb .el-input__icon{
+	background-color: #6BC8FE;
+	color:#fff;
+
+}
+.ckddlb .el-input__icon::before{
+	color:#fff;
+}
+.ckddlb .form1{
+	margin-top: 15px;
+}
+.ckddlb .el-col span{
+	line-height: 25px;
+}
+.ckddlb .zdrq{
+	width: 100%;
+}
+.ckddlb .rq2{
+	
+}
+.ckddlb .shbz{
+	
+	
+
+}
+.ckddlb .hzf{
+	
+}
+.ckddlb .grid-content{
+	position: relative;
+}
+.ckddlb .grid-content .el-button{
+	width: 100px; height: 25px;
+	line-height: 25px;
+	
+	border-radius: 0;
+	background: url('../../img/rk/yeqianmoren.png');
+	border:none;
+	color:#000;
+}
+.ckddlb .grid-content .cx{
+	
+}
+.ckddlb .grid-content .cx::before{
+	width: 20px;height: 20px;
+	content:url(../../img/rk/cx.png);
+	position:absolute;
+	left:10px; top:5px;
+}
+.ckddlb .grid-content .close{
+	left:140px;
+}
+.ckddlb .grid-content .close::before{
+	width: 20px;height: 20px;
+	content:url(../../img/rk/gb.png) ;
+		position:absolute;
+		left:10px; top:5px;
+}
+.ckddlb .grid-content .el-button span{
+	position: absolute;
+	left:40px; top:0;
+	width: 60px;
+	font-size:16px;
+	text-align: justify;
+	display: inline-block;
+
+}
+.ckddlb .el-table{
+	border:1px solid #6BC8FE;
+
+}
+.ckddlb .el-table tr{
+	height: 40px;
+}
+.ckddlb .el-table th{
+	border:1px solid #6BC8FE;
+	background: #cdecfd;
+
+}
+.ckddlb .el-table th>.cell {
+	background: #cdecfd;
+	text-align: center;
+	height: 100%;
+}
+.ckddlb .el-table td{
+	border:1px solid #6BC8FE;
+	background: #F8F8F8;
+}
+
+.ckddlb .el-table__header-wrapper {
+	height: 40px;
+}
+.ckddlb .el-form{
+	
+}
+.ckddlb .pszx{
+	
+  
+}
+.ckddlb .yqbj{
+	position: relative;
+	
+}
+.ckddlb .yq {
+ 
+}
+.ckddlb .djbj{
+	position: relative;
+	
+}
+
+.ckddlb .tongji{
+	height: 40px;
+	background: #CDECFD;
+	border:solid #36B5FC 1px;
+	position: relative;
+}
+.ckddlb .el-tag{
+	width: 155px;
+	height: 28px;
+	background: url('../../img/rk/yeqiandiji.png');
+	color:#000;
+	text-align: center;
+}
+.ckddlb .tag1{
+	position: absolute;
+	left:440px; top:5px;
+}
+.ckddlb .tag2{
+	position: absolute;
+	right:440px; top:5px;
+}
+.ckddlb .el-form span{
+	color:#5EC0FD;
+}
+.ckddlb .el-form .el-button span{
+	color:#000;
+}
+
+.ckddlb .input_width{
+	width: 100%!important;
+}
+.ckddlb .el-row{
+	margin-bottom: 10px;
+}

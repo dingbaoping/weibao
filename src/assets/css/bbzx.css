@@ -1,0 +1,59 @@
+	/* 报表中心的css样式 */
+	.fymxbb .line {
+		text-align: left;
+		line-height: 50px;
+	}
+	.fymxbb .ZHI{
+		margin-left: 10px;
+	}
+	.fymxbb .lines {
+		line-height: 50px;
+	}
+	.fymxbb .el-form-item__content {
+		margin-top: 6px;
+		margin-left: 10px;
+	}
+	.fymxbb .el-table th>.cell {
+		line-height: normal;
+	}
+	
+	.fymxbb .el-table tr:nth-child(2) th {
+		background: none;
+	}
+	.fymxbb .el-input__icon{
+		top: 5px;
+	}
+	.fymxbb .el-button{
+		padding: 6px 15px;
+	}
+	.fymxbb .buttondiv{
+		padding-top: 5px;
+	}
+	.datatable {
+		width: 100%;
+	}
+	
+	.fymxbb {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.buttondiv {
+		margin-top: 12px;
+		margin-left: 20px;
+		display: table;
+		float: left;
+	}
+	
+	.formcx {
+		float: left;
+	}
+	.chaxunkuang {
+		width: 100%;
+		border: 1px solid #999;
+		border-left: 0;
+		border-right: 0;
+	}
+	.el-input__icon:after {
+    vertical-align: middle;
+}
